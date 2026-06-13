@@ -15,11 +15,11 @@ MAX_PER_CATEGORY = 5   # max new repos per category per run
 KEEP_DAYS        = 30  # rolling window size
 
 SEARCH_QUERIES = {
-    "AI Tools":          ["ai agent", "LLM", "GPT"],
-    "Dev Tools":         ["developer tool", "cli tool", "devtools"],
-    "Data & Analytics":  ["data dashboard", "data visualization"],
-    "Security":          ["security tool", "encryption"],
-    "Design & Creative": ["generative art", "UI design"],
+    "AI Tools":          ["ai agent", "LLM", "chatbot", "RAG", "fine-tuning"],
+    "Dev Tools":         ["CLI", "vscode extension", "devtools", "terminal tool", "code generator"],
+    "Data & Analytics":  ["analytics", "data visualization", "dashboard", "pandas", "jupyter"],
+    "Security":          ["cybersecurity", "vulnerability", "authentication", "penetration testing", "encryption"],
+    "Design & Creative": ["design system", "figma plugin", "animation", "generative art", "UI components"],
 }
 
 GITHUB_SEARCH_URL = "https://api.github.com/search/repositories"
@@ -28,10 +28,10 @@ HEADERS = {"Accept": "application/vnd.github+json"}
 
 def search_repos(query: str, date_since: str) -> list[dict]:
     params = {
-        "q": f"{query} created:>{date_since} stars:>1",
+        "q": f"{query} created:>{date_since} stars:>=1",
         "sort": "stars",
         "order": "desc",
-        "per_page": 5,
+        "per_page": 10,
     }
     try:
         resp = requests.get(GITHUB_SEARCH_URL, headers=HEADERS, params=params, timeout=15)
