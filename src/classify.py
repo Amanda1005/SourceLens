@@ -1,5 +1,5 @@
 """
-classify.py — Use Microsoft Phi-4-mini-instruct via Azure AI Foundry (Foundry IQ)
+classify.py - Use Microsoft Phi-4-mini-instruct via Azure AI Foundry (Foundry IQ)
 to assign a category and bilingual descriptions to each repo.
 Requires AZURE_AI_KEY in the environment.
 """
@@ -16,12 +16,12 @@ DATA_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
 CATEGORIES = ["AI Tools", "Dev Tools", "Data & Analytics", "Security", "Design & Creative", "Web3 / Blockchain"]
 
-AZURE_ENDPOINT = "https://agentry-resource.services.ai.azure.com"
+AZURE_ENDPOINT = "https://agentry-resource.services.ai.azure.com/models"
 MODEL_NAME     = "Phi-4-mini-instruct"
 
 SYSTEM_PROMPT = (
     "You are a helpful assistant that classifies open-source GitHub repositories. "
-    "Always respond with valid JSON only — no markdown, no extra text."
+    "Always respond with valid JSON only - no markdown, no extra text."
 )
 
 
@@ -50,7 +50,7 @@ Return JSON with exactly these fields:
 {{
   "category": one of {CATEGORIES},
   "desc_en": "one sentence in English, max 20 words",
-  "desc_zh": "一句話的繁體中文說明，最多30個字"
+  "desc_zh": "one sentence in Traditional Chinese, max 30 characters"
 }}"""
 
 
@@ -62,9 +62,14 @@ def classify_repo(client: ChatCompletionsClient, repo: dict) -> dict:
                 UserMessage(content=build_user_prompt(repo)),
             ],
             model=MODEL_NAME,
-            max_tokens=128,
+            max_tokens=300,
         )
-        raw = response.choices[0].message.content.strip()
+        raw = (response.choices[0].message.content or "").strip()
+        if raw.startswith("```"):
+            raw = raw.split("```")[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
         result = json.loads(raw)
         for key in ("category", "desc_en", "desc_zh"):
             if key not in result:
@@ -90,7 +95,7 @@ def main():
         repos = json.load(f)
 
     if not repos:
-        print("repos.json is empty — nothing to classify.")
+        print("repos.json is empty - nothing to classify.")
         return
 
     api_key = os.environ.get("AZURE_AI_KEY")
@@ -103,7 +108,7 @@ def main():
     )
 
     unclassified = [r for r in repos if not r.get("desc_zh")]
-    print(f"Classifying {len(unclassified)}/{len(repos)} repos with {MODEL_NAME} …")
+    print(f"Classifying {len(unclassified)}/{len(repos)} repos with {MODEL_NAME} ...")
 
     for i, repo in enumerate(unclassified, 1):
         print(f"  [{i}/{len(unclassified)}] {repo['full_name']}")
