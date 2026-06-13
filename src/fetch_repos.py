@@ -11,8 +11,8 @@ from pathlib import Path
 
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
-MAX_NEW_REPOS = 10   # max new repos to add per day
-KEEP_DAYS     = 7    # rolling window size
+MAX_PER_CATEGORY = 3  # max new repos per category per day (5 cats × 3 = 15 max)
+KEEP_DAYS        = 7  # rolling window size
 
 SEARCH_QUERIES = {
     "AI Tools": [
@@ -82,16 +82,20 @@ def fetch_new_repos() -> list[dict]:
     results: list[dict] = []
 
     for category, queries in SEARCH_QUERIES.items():
+        cat_count = 0
         for query in queries:
-            if len(results) >= MAX_NEW_REPOS:
+            if cat_count >= MAX_PER_CATEGORY:
                 break
             print(f"  [{category}] {query!r}")
             items = search_repos(query, date_since)
             for item in items:
+                if cat_count >= MAX_PER_CATEGORY:
+                    break
                 full_name = item.get("full_name", "")
                 if full_name and full_name not in seen:
                     seen.add(full_name)
                     results.append(extract_fields(item, category))
+                    cat_count += 1
             time.sleep(1)
 
     print(f"Found {len(results)} new repos today.")
