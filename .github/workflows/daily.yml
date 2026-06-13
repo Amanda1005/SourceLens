@@ -22,7 +22,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests openai
+        run: pip install requests azure-ai-inference
 
       - name: Fetch repos from GitHub
         run: python src/fetch_repos.py

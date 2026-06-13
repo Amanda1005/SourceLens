@@ -1,21 +1,22 @@
 """
 classify.py — Use Microsoft Phi-4-mini-instruct via Azure AI Foundry (Foundry IQ)
 to assign a category and bilingual descriptions to each repo.
-Reads data/repos.json, enriches each entry, writes back to data/repos.json.
 Requires AZURE_AI_KEY in the environment.
 """
 
 import json
 import os
 import time
-from openai import OpenAI
 from pathlib import Path
+from azure.ai.inference import ChatCompletionsClient
+from azure.ai.inference.models import SystemMessage, UserMessage
+from azure.core.credentials import AzureKeyCredential
 
 DATA_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
 CATEGORIES = ["AI Tools", "Dev Tools", "Data & Analytics", "Security", "Design & Creative"]
 
-AZURE_ENDPOINT = "https://agentry-resource.services.ai.azure.com/openai/v1"
+AZURE_ENDPOINT = "https://agentry-resource.services.ai.azure.com"
 MODEL_NAME     = "Phi-4-mini-instruct"
 
 SYSTEM_PROMPT = (
@@ -41,16 +42,16 @@ Return JSON with exactly these fields:
 }}"""
 
 
-def classify_repo(client: OpenAI, repo: dict) -> dict:
+def classify_repo(client: ChatCompletionsClient, repo: dict) -> dict:
     """Call Phi-4-mini-instruct via Azure AI Foundry and return parsed classification."""
     try:
-        response = client.chat.completions.create(
-            model=MODEL_NAME,
+        response = client.complete(
             messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user",   "content": build_user_prompt(repo)},
+                SystemMessage(content=SYSTEM_PROMPT),
+                UserMessage(content=build_user_prompt(repo)),
             ],
-            max_tokens=256,
+            model=MODEL_NAME,
+            max_tokens=128,
         )
         raw = response.choices[0].message.content.strip()
         result = json.loads(raw)
@@ -65,7 +66,7 @@ def classify_repo(client: OpenAI, repo: dict) -> dict:
         return {
             "category": repo.get("category_hint", "Dev Tools"),
             "desc_en":  repo.get("description", "")[:100],
-            "desc_zh":  "",
+            "desc_zh":  repo.get("description", "")[:30],
         }
 
 
@@ -85,7 +86,10 @@ def main():
     if not api_key:
         raise EnvironmentError("AZURE_AI_KEY is not set.")
 
-    client = OpenAI(base_url=AZURE_ENDPOINT, api_key=api_key, timeout=25.0)
+    client = ChatCompletionsClient(
+        endpoint=AZURE_ENDPOINT,
+        credential=AzureKeyCredential(api_key),
+    )
 
     unclassified = [r for r in repos if not r.get("desc_zh")]
     print(f"Classifying {len(unclassified)}/{len(repos)} repos with {MODEL_NAME} …")
@@ -94,11 +98,11 @@ def main():
         print(f"  [{i}/{len(unclassified)}] {repo['full_name']}")
         classification = classify_repo(client, repo)
         repo.update(classification)
-        time.sleep(0.5)
+        with open(DATA_PATH, "w", encoding="utf-8") as f:
+            json.dump(repos, f, ensure_ascii=False, indent=2)
+        time.sleep(0.3)
 
-    with open(DATA_PATH, "w", encoding="utf-8") as f:
-        json.dump(repos, f, ensure_ascii=False, indent=2)
-    print(f"Saved classified data to {DATA_PATH}")
+    print(f"Done. Saved {DATA_PATH}")
 
 
 if __name__ == "__main__":
