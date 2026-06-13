@@ -16,7 +16,8 @@ KEEP_DAYS        = 90  # rolling window size
 
 SEARCH_QUERIES = {
     "AI Tools":          ["ai agent", "LLM", "chatbot", "RAG", "fine-tuning"],
-    "Dev Tools":         ["CLI", "vscode extension", "devtools", "terminal tool", "code generator"],
+    "Dev Tools":         ["CLI", "vscode extension", "devtools", "terminal tool", "code generator",
+                          "language:c", "language:c++"],
     "Data & Analytics":  ["analytics", "data visualization", "dashboard", "pandas", "jupyter"],
     "Security":          ["cybersecurity", "vulnerability", "authentication", "penetration testing", "encryption"],
     "Design & Creative": ["design system", "figma plugin", "animation", "generative art", "UI components"],

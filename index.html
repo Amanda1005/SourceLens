@@ -386,6 +386,7 @@
     <button class="tab" data-val="JavaScript">JavaScript / TypeScript</button>
     <button class="tab" data-val="Python">Python</button>
     <button class="tab" data-val="HTML">HTML / CSS</button>
+    <button class="tab" data-val="C">C / C++</button>
     <button class="tab" data-val="Others">Others</button>
   </div>
 </nav>
@@ -422,9 +423,10 @@
     "Design & Creative": "Design & Creative",
   };
 
-  const JS_LANGS  = new Set(["javascript","typescript","coffeescript","vue"]);
-  const PY_LANGS  = new Set(["python"]);
+  const JS_LANGS   = new Set(["javascript","typescript","coffeescript","vue"]);
+  const PY_LANGS   = new Set(["python"]);
   const HTML_LANGS = new Set(["html","css","scss","sass"]);
+  const C_LANGS    = new Set(["c","c++"]);
 
   function matchesLang(repoLang, filter) {
     if (filter === "All") return true;
@@ -432,7 +434,8 @@
     if (filter === "JavaScript") return JS_LANGS.has(l);
     if (filter === "Python")     return PY_LANGS.has(l);
     if (filter === "HTML")       return HTML_LANGS.has(l);
-    if (filter === "Others")     return !JS_LANGS.has(l) && !PY_LANGS.has(l) && !HTML_LANGS.has(l);
+    if (filter === "C")          return C_LANGS.has(l);
+    if (filter === "Others")     return !JS_LANGS.has(l) && !PY_LANGS.has(l) && !HTML_LANGS.has(l) && !C_LANGS.has(l);
     return true;
   }
 
