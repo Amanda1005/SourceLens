@@ -1,5 +1,5 @@
 """
-fetch_repos.py — Search GitHub for repos from the past 30 days (by language)
+fetch_repos.py — Search GitHub for repos from the past 30 days by topic keywords
 and merge into a rolling 30-day window. Older entries are pruned automatically.
 """
 
@@ -11,77 +11,66 @@ from pathlib import Path
 
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
-MAX_PER_CATEGORY = 5   # max new repos per language category per run
+MAX_PER_CATEGORY = 5   # max new repos per category per run
 KEEP_DAYS        = 30  # rolling window size
 
-# Each list entry is a GitHub language keyword for the search API
-LANGUAGE_CATEGORIES: dict[str, list[str]] = {
-    "JavaScript": ["javascript", "typescript"],
-    "Python":     ["python"],
-    "HTML":       ["html"],
-    "Others":     ["go", "rust", "java", "shell"],
+SEARCH_QUERIES = {
+    "AI Tools":          ["ai agent", "LLM", "GPT"],
+    "Dev Tools":         ["developer tool", "cli tool", "devtools"],
+    "Data & Analytics":  ["data dashboard", "data visualization"],
+    "Security":          ["security tool", "encryption"],
+    "Design & Creative": ["generative art", "UI design"],
 }
 
 GITHUB_SEARCH_URL = "https://api.github.com/search/repositories"
 HEADERS = {"Accept": "application/vnd.github+json"}
 
 
-def get_language_category(language: str) -> str:
-    lang = (language or "").lower()
-    if lang in ("javascript", "typescript", "coffeescript", "vue"):
-        return "JavaScript"
-    if lang == "python":
-        return "Python"
-    if lang in ("html", "css", "scss", "sass"):
-        return "HTML"
-    return "Others"
-
-
-def search_repos(language_keyword: str, date_since: str) -> list[dict]:
+def search_repos(query: str, date_since: str) -> list[dict]:
     params = {
-        "q": f"language:{language_keyword} created:>{date_since} stars:>2",
+        "q": f"{query} created:>{date_since} stars:>1",
         "sort": "stars",
         "order": "desc",
-        "per_page": 10,
+        "per_page": 5,
     }
     try:
         resp = requests.get(GITHUB_SEARCH_URL, headers=HEADERS, params=params, timeout=15)
         resp.raise_for_status()
         return resp.json().get("items", [])
     except requests.RequestException as e:
-        print(f"  [warn] GitHub API error for 'language:{language_keyword}': {e}")
+        print(f"  [warn] GitHub API error for '{query}': {e}")
         return []
 
 
-def extract_fields(item: dict, category: str) -> dict:
+def extract_fields(item: dict, category_hint: str) -> dict:
     return {
-        "name":        item.get("name", ""),
-        "full_name":   item.get("full_name", ""),
-        "description": item.get("description") or "",
-        "url":         item.get("html_url", ""),
-        "stars":       item.get("stargazers_count", 0),
-        "language":    item.get("language") or "",
-        "topics":      item.get("topics", []),
-        "created_at":  item.get("created_at", ""),
-        "category":    category,
+        "name":          item.get("name", ""),
+        "full_name":     item.get("full_name", ""),
+        "description":   item.get("description") or "",
+        "url":           item.get("html_url", ""),
+        "stars":         item.get("stargazers_count", 0),
+        "language":      item.get("language") or "",
+        "topics":        item.get("topics", []),
+        "created_at":    item.get("created_at", ""),
+        "category_hint": category_hint,
     }
 
 
 def fetch_new_repos() -> list[dict]:
     since = datetime.now(timezone.utc) - timedelta(days=30)
     date_since = since.strftime("%Y-%m-%d")
-    print(f"Fetching repos created after {date_since} (last 30 days, stars > 2) …")
+    print(f"Fetching repos created after {date_since} (last 30 days, stars > 1) …")
 
     seen: set[str] = set()
     results: list[dict] = []
 
-    for category, lang_keywords in LANGUAGE_CATEGORIES.items():
+    for category, queries in SEARCH_QUERIES.items():
         cat_count = 0
-        for lang_keyword in lang_keywords:
+        for query in queries:
             if cat_count >= MAX_PER_CATEGORY:
                 break
-            print(f"  [{category}] language:{lang_keyword}")
-            items = search_repos(lang_keyword, date_since)
+            print(f"  [{category}] {query!r}")
+            items = search_repos(query, date_since)
             for item in items:
                 if cat_count >= MAX_PER_CATEGORY:
                     break
@@ -97,7 +86,6 @@ def fetch_new_repos() -> list[dict]:
 
 
 def prune_old(repos: list[dict]) -> list[dict]:
-    """Remove repos created more than KEEP_DAYS days ago."""
     cutoff = datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)
     kept = []
     for r in repos:
@@ -121,15 +109,14 @@ def main():
         except Exception:
             existing = []
 
-    # Re-categorize existing repos by language (migration for old category names)
+    # Restore topic category from category_hint if category was overwritten with a language name
+    lang_cats = {"JavaScript", "Python", "HTML", "Others"}
     for repo in existing:
-        old_cat = repo.get("category", "")
-        if old_cat not in LANGUAGE_CATEGORIES:
-            repo["category"] = get_language_category(repo.get("language", ""))
+        if repo.get("category") in lang_cats and repo.get("category_hint"):
+            repo["category"] = repo["category_hint"]
 
     new_repos = fetch_new_repos()
 
-    # Merge: new repos first, then existing (skip duplicates)
     existing_names = {r["full_name"] for r in new_repos}
     merged = new_repos[:]
     for repo in existing:

@@ -106,22 +106,33 @@
       border-bottom: 1px solid rgba(255,255,255,0.7);
       padding: 0 24px;
     }
-    .tabs {
+    .tab-row {
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
+      align-items: center;
       gap: 2px;
       overflow-x: auto;
       scrollbar-width: none;
     }
-    .tabs::-webkit-scrollbar { display: none; }
+    .tab-row:first-child { border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .tab-row::-webkit-scrollbar { display: none; }
+    .tab-row-label {
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      white-space: nowrap;
+      min-width: 58px;
+      padding-right: 4px;
+    }
     .tab {
       background: none;
       border: none;
       color: var(--muted);
       cursor: pointer;
-      font-size: 0.9rem;
-      padding: 13px 18px;
+      font-size: 0.88rem;
+      padding: 11px 16px;
       border-bottom: 2px solid transparent;
       white-space: nowrap;
       transition: color 0.15s, border-color 0.15s;
@@ -129,6 +140,8 @@
     }
     .tab:hover { color: #1e1035; }
     .tab.active { color: #7c3aed; border-bottom-color: #7c3aed; font-weight: 600; text-shadow: 0 0 10px rgba(124,58,237,0.35); }
+    /* language row uses smaller accent colour */
+    #tabs-lang .tab.active { color: #0ea5e9; border-bottom-color: #0ea5e9; text-shadow: 0 0 10px rgba(14,165,233,0.3); }
 
     /* ── Main ── */
     main {
@@ -193,10 +206,11 @@
       width: 100%;
       flex-shrink: 0;
     }
-    .bar-JavaScript { background: linear-gradient(90deg, #b38600, #f1e05a); }
-    .bar-Python     { background: linear-gradient(90deg, #1a4f8a, #4a90d9); }
-    .bar-HTML       { background: linear-gradient(90deg, #b02800, #e34c26); }
-    .bar-Others     { background: linear-gradient(90deg, #6d28d9, #a78bfa); }
+    .bar-AI\ Tools            { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+    .bar-Dev\ Tools           { background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
+    .bar-Data\ \&\ Analytics  { background: linear-gradient(90deg, #10b981, #34d399); }
+    .bar-Security             { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+    .bar-Design\ \&\ Creative { background: linear-gradient(90deg, #ec4899, #f472b6); }
 
     .card-body {
       padding: 18px 20px 16px;
@@ -231,10 +245,11 @@
       white-space: nowrap;
       flex-shrink: 0;
     }
-    .badge-JavaScript { background: rgba(241,224,90,0.18);  color: #8a6800; border: 1px solid rgba(241,224,90,0.5); }
-    .badge-Python     { background: rgba(74,144,217,0.14);  color: #1a4f8a; border: 1px solid rgba(74,144,217,0.4); }
-    .badge-HTML       { background: rgba(227,76,38,0.12);   color: #b02800; border: 1px solid rgba(227,76,38,0.35); }
-    .badge-Others     { background: rgba(167,139,250,0.14); color: #6d28d9; border: 1px solid rgba(167,139,250,0.4); }
+    .badge-AI\ Tools            { background: rgba(124,58,237,0.1);  color: #6d28d9; border: 1px solid rgba(124,58,237,0.3); }
+    .badge-Dev\ Tools           { background: rgba(14,165,233,0.1);  color: #0369a1; border: 1px solid rgba(14,165,233,0.3); }
+    .badge-Data\ \&\ Analytics  { background: rgba(16,185,129,0.1);  color: #065f46; border: 1px solid rgba(16,185,129,0.3); }
+    .badge-Security             { background: rgba(245,158,11,0.1);  color: #92400e; border: 1px solid rgba(245,158,11,0.3); }
+    .badge-Design\ \&\ Creative { background: rgba(236,72,153,0.1);  color: #9d174d; border: 1px solid rgba(236,72,153,0.3); }
 
     /* descriptions — zh primary, en secondary */
     .desc-zh {
@@ -344,12 +359,22 @@
 </header>
 
 <nav>
-  <div class="tabs" id="tabs">
-    <button class="tab active" data-cat="All">All</button>
-    <button class="tab" data-cat="JavaScript">JavaScript</button>
-    <button class="tab" data-cat="Python">Python</button>
-    <button class="tab" data-cat="HTML">HTML</button>
-    <button class="tab" data-cat="Others">Others</button>
+  <div class="tab-row" id="tabs-cat">
+    <span class="tab-row-label">Category</span>
+    <button class="tab active" data-val="All">All</button>
+    <button class="tab" data-val="AI Tools">🤖 AI Tools</button>
+    <button class="tab" data-val="Dev Tools">🛠 Dev Tools</button>
+    <button class="tab" data-val="Data & Analytics">📊 Data & Analytics</button>
+    <button class="tab" data-val="Security">🔒 Security</button>
+    <button class="tab" data-val="Design & Creative">🎨 Design & Creative</button>
+  </div>
+  <div class="tab-row" id="tabs-lang">
+    <span class="tab-row-label">Language</span>
+    <button class="tab active" data-val="All">All</button>
+    <button class="tab" data-val="JavaScript">JS / TS</button>
+    <button class="tab" data-val="Python">Python</button>
+    <button class="tab" data-val="HTML">HTML / CSS</button>
+    <button class="tab" data-val="Others">Others</button>
   </div>
 </nav>
 
@@ -376,15 +401,31 @@
   };
 
   const CAT_LABEL = {
-    "All":        "All",
-    "JavaScript": "JavaScript",
-    "Python":     "Python",
-    "HTML":       "HTML",
-    "Others":     "Others",
+    "All":               "All",
+    "AI Tools":          "AI Tools",
+    "Dev Tools":         "Dev Tools",
+    "Data & Analytics":  "Data & Analytics",
+    "Security":          "Security",
+    "Design & Creative": "Design & Creative",
   };
 
+  const JS_LANGS  = new Set(["javascript","typescript","coffeescript","vue"]);
+  const PY_LANGS  = new Set(["python"]);
+  const HTML_LANGS = new Set(["html","css","scss","sass"]);
+
+  function matchesLang(repoLang, filter) {
+    if (filter === "All") return true;
+    const l = (repoLang || "").toLowerCase();
+    if (filter === "JavaScript") return JS_LANGS.has(l);
+    if (filter === "Python")     return PY_LANGS.has(l);
+    if (filter === "HTML")       return HTML_LANGS.has(l);
+    if (filter === "Others")     return !JS_LANGS.has(l) && !PY_LANGS.has(l) && !HTML_LANGS.has(l);
+    return true;
+  }
+
   let allRepos = [];
-  let activeCategory = "All";
+  let activeCat  = "All";
+  let activeLang = "All";
 
   async function loadData() {
     try {
@@ -482,9 +523,9 @@
   }
 
   function render() {
-    const filtered = activeCategory === "All"
-      ? allRepos
-      : allRepos.filter(r => (r.category || r.category_hint) === activeCategory);
+    let filtered = allRepos;
+    if (activeCat  !== "All") filtered = filtered.filter(r => (r.category || r.category_hint) === activeCat);
+    if (activeLang !== "All") filtered = filtered.filter(r => matchesLang(r.language, activeLang));
 
     const container = document.getElementById("cards");
     const msg       = document.getElementById("message");
@@ -493,7 +534,7 @@
     container.innerHTML = "";
 
     if (filtered.length === 0) {
-      msg.textContent = "No projects in this category yet.";
+      msg.textContent = "No projects match this filter.";
       msg.style.display = "";
       stats.textContent = "";
       return;
@@ -501,21 +542,32 @@
 
     msg.textContent = "";
     msg.style.display = "none";
-    const catLabel = activeCategory === "All" ? "" : ` in "${CAT_LABEL[activeCategory]}"`;
-    stats.textContent =
-      `${filtered.length} repos found${catLabel} · ${allRepos.length} total (30-day rolling)`;
+    const parts = [];
+    if (activeCat  !== "All") parts.push(`"${CAT_LABEL[activeCat]}"`);
+    if (activeLang !== "All") parts.push(`${activeLang}`);
+    const label = parts.length ? ` · ${parts.join(" + ")}` : "";
+    stats.textContent = `${filtered.length} repos found${label} · ${allRepos.length} total (30-day rolling)`;
 
     const frag = document.createDocumentFragment();
     filtered.forEach((r, i) => frag.appendChild(buildCard(r, i)));
     container.appendChild(frag);
   }
 
-  document.getElementById("tabs").addEventListener("click", e => {
+  document.getElementById("tabs-cat").addEventListener("click", e => {
     const btn = e.target.closest(".tab");
     if (!btn) return;
-    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll("#tabs-cat .tab").forEach(t => t.classList.remove("active"));
     btn.classList.add("active");
-    activeCategory = btn.dataset.cat;
+    activeCat = btn.dataset.val;
+    render();
+  });
+
+  document.getElementById("tabs-lang").addEventListener("click", e => {
+    const btn = e.target.closest(".tab");
+    if (!btn) return;
+    document.querySelectorAll("#tabs-lang .tab").forEach(t => t.classList.remove("active"));
+    btn.classList.add("active");
+    activeLang = btn.dataset.val;
     render();
   });
 

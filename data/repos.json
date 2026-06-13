@@ -1,67 +1,10 @@
 [
   {
-    "name": "GuJumpgate",
-    "full_name": "FoundZiGu/GuJumpgate",
-    "description": "",
-    "url": "https://github.com/FoundZiGu/GuJumpgate",
-    "stars": 3840,
-    "language": "JavaScript",
-    "topics": [],
-    "created_at": "2026-05-19T11:52:52Z",
-    "category": "JavaScript",
-    "desc_en": "",
-    "desc_zh": ""
-  },
-  {
-    "name": "gsd-core",
-    "full_name": "open-gsd/gsd-core",
-    "description": "Git. Ship. Done - Core",
-    "url": "https://github.com/open-gsd/gsd-core",
-    "stars": 3804,
-    "language": "JavaScript",
-    "topics": [
-      "claude-code",
-      "context-engineering",
-      "meta-prompting",
-      "spec-driven-development"
-    ],
-    "created_at": "2026-05-22T11:36:21Z",
-    "category": "JavaScript",
-    "desc_en": "Git. Ship. Done - Core",
-    "desc_zh": "Git. Ship. Done - Core"
-  },
-  {
-    "name": "smallcode",
-    "full_name": "Doorman11991/smallcode",
-    "description": "AI coding agent optimized for small LLMs. 87% benchmark with 4B-active model.",
-    "url": "https://github.com/Doorman11991/smallcode",
-    "stars": 1845,
-    "language": "JavaScript",
-    "topics": [],
-    "created_at": "2026-05-18T06:19:44Z",
-    "category": "JavaScript",
-    "desc_en": "AI coding agent optimized for small LLMs. 87% benchmark with 4B-active model.",
-    "desc_zh": "AI coding agent optimized for "
-  },
-  {
-    "name": "wechatpay",
-    "full_name": "run-liyi/wechatpay",
-    "description": "微信账单分析工具 - 基于Electron的可视化账单分析应用",
-    "url": "https://github.com/run-liyi/wechatpay",
-    "stars": 1496,
-    "language": "JavaScript",
-    "topics": [],
-    "created_at": "2026-05-21T06:40:00Z",
-    "category": "JavaScript",
-    "desc_en": "微信账单分析工具 - 基于Electron的可视化账单分析应用",
-    "desc_zh": "微信账单分析工具 - 基于Electron的可视化账单分析应"
-  },
-  {
     "name": "ponytail",
     "full_name": "DietrichGebert/ponytail",
     "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
     "url": "https://github.com/DietrichGebert/ponytail",
-    "stars": 1045,
+    "stars": 1017,
     "language": "JavaScript",
     "topics": [
       "agent-skills",
@@ -76,282 +19,10 @@
       "yagni"
     ],
     "created_at": "2026-06-12T00:52:37Z",
-    "category": "JavaScript",
+    "category_hint": "AI Tools",
+    "category": "AI Tools",
     "desc_en": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you nev",
     "desc_zh": "Makes your AI agent think like"
-  },
-  {
-    "name": "odysseus",
-    "full_name": "pewdiepie-archdaemon/odysseus",
-    "description": "Self-hosted AI workspace. ",
-    "url": "https://github.com/pewdiepie-archdaemon/odysseus",
-    "stars": 69566,
-    "language": "Python",
-    "topics": [],
-    "created_at": "2026-05-31T14:05:51Z",
-    "category": "Python",
-    "desc_en": "Self-hosted AI workspace. ",
-    "desc_zh": "Self-hosted AI workspace. "
-  },
-  {
-    "name": "defending-code-reference-harness",
-    "full_name": "anthropics/defending-code-reference-harness",
-    "description": "Skills for threat modeling, scanning, triage, patching, plus an autonomous scanning harness you can /customize",
-    "url": "https://github.com/anthropics/defending-code-reference-harness",
-    "stars": 5793,
-    "language": "Python",
-    "topics": [
-      "security"
-    ],
-    "created_at": "2026-05-22T16:00:56Z",
-    "category": "Python",
-    "desc_en": "Skills for threat modeling, scanning, triage, patching, plus an autonomous scanning harness you can ",
-    "desc_zh": "Skills for threat modeling, sc"
-  },
-  {
-    "name": "PaperSpine",
-    "full_name": "WUBING2023/PaperSpine",
-    "description": "PaperSpine is a motivation-driven skill for learning from strong academic papers, building a paper’s central argument, and rewriting manuscripts through evidence-aware blueprints, revision matrices, and LaTeX-safe audits.",
-    "url": "https://github.com/WUBING2023/PaperSpine",
-    "stars": 3000,
-    "language": "Python",
-    "topics": [],
-    "created_at": "2026-05-17T08:37:31Z",
-    "category": "Python",
-    "desc_en": "PaperSpine is a motivation-driven skill for learning from strong academic papers, building a paper’s",
-    "desc_zh": "PaperSpine is a motivation-dri"
-  },
-  {
-    "name": "MisoTTS",
-    "full_name": "MisoLabsAI/MisoTTS",
-    "description": "Miso TTS is an 8 billion, highly emotive text-to-speech model",
-    "url": "https://github.com/MisoLabsAI/MisoTTS",
-    "stars": 2764,
-    "language": "Python",
-    "topics": [],
-    "created_at": "2026-05-20T10:04:01Z",
-    "category": "Python",
-    "desc_en": "Miso TTS is an 8 billion, highly emotive text-to-speech model",
-    "desc_zh": "Miso TTS is an 8 billion, high"
-  },
-  {
-    "name": "Void-Tools-v2.0",
-    "full_name": "V0id-v2/Void-Tools-v2.0",
-    "description": "Python terminal multitool — OSINT, Discord, web & network utilities. Rich TUI, 13 themes, remote updates. Educational use only.",
-    "url": "https://github.com/V0id-v2/Void-Tools-v2.0",
-    "stars": 2023,
-    "language": "Python",
-    "topics": [
-      "discord-joiner",
-      "discord-multi-tool",
-      "discord-multitool",
-      "discord-multitools",
-      "discord-nuke-bot",
-      "discord-nuker",
-      "discord-nukers",
-      "discord-raid",
-      "discord-raid-tool",
-      "discord-raider",
-      "discord-token-gen",
-      "discord-token-generator",
-      "discord-tool",
-      "discord-tools",
-      "multi-tools",
-      "multitool",
-      "token-generator",
-      "token-joiner",
-      "token-nuker"
-    ],
-    "created_at": "2026-05-30T21:57:30Z",
-    "category": "Python",
-    "desc_en": "Python terminal multitool — OSINT, Discord, web & network utilities. Rich TUI, 13 themes, remote upd",
-    "desc_zh": "Python terminal multitool — OS"
-  },
-  {
-    "name": "Agent-Learning-Hub",
-    "full_name": "datawhalechina/Agent-Learning-Hub",
-    "description": "AI Agent 学习路线与资料库收集",
-    "url": "https://github.com/datawhalechina/Agent-Learning-Hub",
-    "stars": 3565,
-    "language": "HTML",
-    "topics": [],
-    "created_at": "2026-05-17T06:41:12Z",
-    "category": "HTML",
-    "desc_en": "AI Agent 学习路线与资料库收集",
-    "desc_zh": "AI Agent 学习路线与资料库收集"
-  },
-  {
-    "name": "guizang-social-card-skill",
-    "full_name": "op7418/guizang-social-card-skill",
-    "description": "🪧 Claude Code / Codex skill — generate Xiaohongshu carousels & WeChat 21:9+1:1 cover pairs. Editorial × Swiss visual systems, 28 layouts, 10 themes, single-file HTML → PNG. 小红书图文 + 公众号封面对",
-    "url": "https://github.com/op7418/guizang-social-card-skill",
-    "stars": 3435,
-    "language": "HTML",
-    "topics": [
-      "agent-skill",
-      "ai-agent",
-      "anthropic",
-      "claude-code",
-      "claude-skill",
-      "codex",
-      "editorial-design",
-      "html-template",
-      "image-generation",
-      "playwright",
-      "rednote",
-      "social-cards",
-      "swiss-design",
-      "wechat",
-      "xiaohongshu"
-    ],
-    "created_at": "2026-05-27T12:05:05Z",
-    "category": "HTML",
-    "desc_en": "🪧 Claude Code / Codex skill — generate Xiaohongshu carousels & WeChat 21:9+1:1 cover pairs. Editoria",
-    "desc_zh": "🪧 Claude Code / Codex skill — "
-  },
-  {
-    "name": "html-video",
-    "full_name": "nexu-io/html-video",
-    "description": "Programmatic video for coding agents — HTML to video on your laptop. Turn HTML, CSS & data into real MP4s with pluggable render engines, 21 templates, AI soundtrack. Apache-2.0, no per-render fees. An official project by the Open Design team.",
-    "url": "https://github.com/nexu-io/html-video",
-    "stars": 2965,
-    "language": "HTML",
-    "topics": [
-      "ai-agent",
-      "apache-2",
-      "coding-agent",
-      "css",
-      "ffmpeg",
-      "html",
-      "html-to-video",
-      "hyperframes",
-      "mp4",
-      "open-design",
-      "open-source",
-      "programmatic-video",
-      "video",
-      "video-as-code",
-      "video-generation"
-    ],
-    "created_at": "2026-05-27T02:08:11Z",
-    "category": "HTML",
-    "desc_en": "Programmatic video for coding agents — HTML to video on your laptop. Turn HTML, CSS & data into real",
-    "desc_zh": "Programmatic video for coding "
-  },
-  {
-    "name": "effective-html",
-    "full_name": "plannotator/effective-html",
-    "description": "Agent skill for elegant and simple html plans, architecture diagrams, or whatever else you can think of.",
-    "url": "https://github.com/plannotator/effective-html",
-    "stars": 570,
-    "language": "HTML",
-    "topics": [
-      "agent-skills",
-      "skills"
-    ],
-    "created_at": "2026-06-09T23:24:51Z",
-    "category": "HTML",
-    "desc_en": "Agent skill for elegant and simple html plans, architecture diagrams, or whatever else you can think",
-    "desc_zh": "Agent skill for elegant and si"
-  },
-  {
-    "name": "edulab",
-    "full_name": "wy51ai/edulab",
-    "description": "",
-    "url": "https://github.com/wy51ai/edulab",
-    "stars": 504,
-    "language": "HTML",
-    "topics": [],
-    "created_at": "2026-06-04T07:02:45Z",
-    "category": "HTML",
-    "desc_en": "",
-    "desc_zh": ""
-  },
-  {
-    "name": "open-code-review",
-    "full_name": "alibaba/open-code-review",
-    "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-    "url": "https://github.com/alibaba/open-code-review",
-    "stars": 6500,
-    "language": "Go",
-    "topics": [
-      "agent",
-      "code-review",
-      "code-review-assistant",
-      "harness",
-      "repository-level-context"
-    ],
-    "created_at": "2026-05-18T02:16:36Z",
-    "category": "Others",
-    "desc_en": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: determi",
-    "desc_zh": "Open-source & free — Battle-te"
-  },
-  {
-    "name": "bumblebee",
-    "full_name": "perplexityai/bumblebee",
-    "description": "Read-only developer endpoint scanner for on-disk package, extension, and developer-tool metadata, built to check exposure to known software supply-chain compromises.",
-    "url": "https://github.com/perplexityai/bumblebee",
-    "stars": 4415,
-    "language": "Go",
-    "topics": [
-      "golang",
-      "package-inventory",
-      "supply-chain-security"
-    ],
-    "created_at": "2026-05-20T18:11:37Z",
-    "category": "Others",
-    "desc_en": "Read-only developer endpoint scanner for on-disk package, extension, and developer-tool metadata, bu",
-    "desc_zh": "Read-only developer endpoint s"
-  },
-  {
-    "name": "SenPaiScanner",
-    "full_name": "MatinSenPai/SenPaiScanner",
-    "description": "A light-weight scanner for Cloudflare IPs, written in Golang",
-    "url": "https://github.com/MatinSenPai/SenPaiScanner",
-    "stars": 1469,
-    "language": "Go",
-    "topics": [],
-    "created_at": "2026-05-28T17:02:54Z",
-    "category": "Others",
-    "desc_en": "A light-weight scanner for Cloudflare IPs, written in Golang",
-    "desc_zh": "A light-weight scanner for Clo"
-  },
-  {
-    "name": "sandboxd",
-    "full_name": "tastyeffectco/sandboxd",
-    "description": "Self-hosted dev sandboxes with preview URLs. One command. No Kubernetes, perfect for coding agents and Saas factories",
-    "url": "https://github.com/tastyeffectco/sandboxd",
-    "stars": 589,
-    "language": "Go",
-    "topics": [
-      "ai",
-      "ai-agent",
-      "dev-environment",
-      "docker",
-      "isolation",
-      "pinokio",
-      "preview",
-      "preview-environment",
-      "sandbox",
-      "self-hosted"
-    ],
-    "created_at": "2026-06-03T18:55:02Z",
-    "category": "Others",
-    "desc_en": "Self-hosted dev sandboxes with preview URLs. One command. No Kubernetes, perfect for coding agents a",
-    "desc_zh": "Self-hosted dev sandboxes with"
-  },
-  {
-    "name": "DEEIX-Chat",
-    "full_name": "DEEIX-AI/DEEIX-Chat",
-    "description": "An enterprise AI workspace for model routing, multimodal chat, files, tools, billing, identity, and operations.",
-    "url": "https://github.com/DEEIX-AI/DEEIX-Chat",
-    "stars": 503,
-    "language": "Go",
-    "topics": [],
-    "created_at": "2026-05-21T08:57:01Z",
-    "category": "Others",
-    "desc_en": "An enterprise AI workspace for model routing, multimodal chat, files, tools, billing, identity, and ",
-    "desc_zh": "An enterprise AI workspace for"
   },
   {
     "name": "baoyu-design",
@@ -372,7 +43,7 @@
     ],
     "created_at": "2026-06-07T01:16:18Z",
     "category_hint": "AI Tools",
-    "category": "JavaScript",
+    "category": "AI Tools",
     "desc_en": "Run Claude Design locally as an Agent Skill — Cursor, Claude Code & more. Produce polished UI mockup",
     "desc_zh": "Run Claude Design locally as a"
   },
@@ -386,7 +57,7 @@
     "topics": [],
     "created_at": "2026-06-07T15:33:07Z",
     "category_hint": "AI Tools",
-    "category": "HTML",
+    "category": "AI Tools",
     "desc_en": "AI 高考志愿顾问 — 会追问、会分析、敢说真话",
     "desc_zh": "AI 高考志愿顾问 — 会追问、会分析、敢说真话"
   },
@@ -414,7 +85,7 @@
     ],
     "created_at": "2026-06-08T15:46:52Z",
     "category_hint": "Dev Tools",
-    "category": "Others",
+    "category": "Dev Tools",
     "desc_en": "A professional-grade Windows application uninstallation tool with deep cleaning capabilities. Perfec",
     "desc_zh": "A professional-grade Windows a"
   },
@@ -432,7 +103,7 @@
     ],
     "created_at": "2026-06-08T20:18:45Z",
     "category_hint": "Dev Tools",
-    "category": "JavaScript",
+    "category": "Dev Tools",
     "desc_en": "r3f-webgpu-perf is a lightweight performance monitoring tool for React Three Fiber applications runn",
     "desc_zh": "r3f-webgpu-perf is a lightweig"
   },
@@ -457,7 +128,7 @@
     ],
     "created_at": "2026-06-08T03:09:52Z",
     "category_hint": "Dev Tools",
-    "category": "Others",
+    "category": "Dev Tools",
     "desc_en": "Copy anything, press Alt + V, and paste it back — with developer super‑powers like JSON/SQL formatti",
     "desc_zh": "Copy anything, press Alt + V, "
   },
@@ -471,7 +142,7 @@
     "topics": [],
     "created_at": "2026-06-08T01:22:35Z",
     "category_hint": "Data & Analytics",
-    "category": "JavaScript",
+    "category": "Data & Analytics",
     "desc_en": "Animated GitHub PR triage dashboard - replaces messy notifications with a prioritized action center.",
     "desc_zh": "Animated GitHub PR triage dash"
   },
@@ -485,7 +156,7 @@
     "topics": [],
     "created_at": "2026-06-08T22:49:05Z",
     "category_hint": "Data & Analytics",
-    "category": "JavaScript",
+    "category": "Data & Analytics",
     "desc_en": "Orion Sentinel OSINT Platform - Real-time threat monitoring with NewsAPI, AlienVault OTX, AIS marine",
     "desc_zh": "Orion Sentinel OSINT Platform "
   },
@@ -499,7 +170,7 @@
     "topics": [],
     "created_at": "2026-06-11T06:35:21Z",
     "category_hint": "Data & Analytics",
-    "category": "Python",
+    "category": "Data & Analytics",
     "desc_en": "The production code behind FtC's public impact dashboard, and the AT Protocol shared-impact layer it",
     "desc_zh": "The production code behind FtC"
   },
@@ -519,7 +190,7 @@
     ],
     "created_at": "2026-06-08T15:12:07Z",
     "category_hint": "Security",
-    "category": "Others",
+    "category": "Security",
     "desc_en": "🌐 Ultimate FC26 Live Editor is a career mode enhancement tool for EA Sports FC 26. Features include ",
     "desc_zh": "🌐 Ultimate FC26 Live Editor is"
   },
@@ -540,7 +211,7 @@
     ],
     "created_at": "2026-06-09T18:48:36Z",
     "category_hint": "Security",
-    "category": "Python",
+    "category": "Security",
     "desc_en": "Professional CTF workflow toolkit design for Codex Kali Linux and Kali WSL: skills, guard hooks, hea",
     "desc_zh": "Professional CTF workflow tool"
   },
@@ -554,7 +225,7 @@
     "topics": [],
     "created_at": "2026-06-10T16:10:38Z",
     "category_hint": "Security",
-    "category": "Others",
+    "category": "Security",
     "desc_en": "All-in-One Installer — Cyber Pentools + 9 Advanced Security Tools",
     "desc_zh": "All-in-One Installer — Cyber P"
   },
@@ -576,7 +247,7 @@
     ],
     "created_at": "2026-06-09T22:31:51Z",
     "category_hint": "Design & Creative",
-    "category": "JavaScript",
+    "category": "Design & Creative",
     "desc_en": "LUMEN, a generative shader studio. 9 WebGL2 art modes plus synth style blending, perfect-loop animat",
     "desc_zh": "LUMEN, a generative shader stu"
   },
@@ -590,7 +261,7 @@
     "topics": [],
     "created_at": "2026-06-09T06:28:28Z",
     "category_hint": "Design & Creative",
-    "category": "JavaScript",
+    "category": "Design & Creative",
     "desc_en": "An interactive generative art tool for exploring recursive tessellation patterns.",
     "desc_zh": "An interactive generative art "
   },
@@ -604,7 +275,7 @@
     "topics": [],
     "created_at": "2026-06-09T06:20:18Z",
     "category_hint": "Design & Creative",
-    "category": "Python",
+    "category": "Design & Creative",
     "desc_en": "A next-generation LLM4AD platform focused on intuitive UI interactions and seamless collaboration wi",
     "desc_zh": "A next-generation LLM4AD platf"
   },
@@ -618,7 +289,7 @@
     "topics": [],
     "created_at": "2026-06-13T00:52:49Z",
     "category_hint": "AI Tools",
-    "category": "Python",
+    "category": "AI Tools",
     "desc_en": "Use AI agents to automatically download videos from the internet and generate natural voice-overs in",
     "desc_zh": "Use AI agents to automatically"
   },
@@ -644,7 +315,7 @@
     ],
     "created_at": "2026-06-13T03:04:25Z",
     "category_hint": "AI Tools",
-    "category": "Others",
+    "category": "AI Tools",
     "desc_en": "Open every project in its own terminal (Claude Code / Codex / VS Code) and auto-tile them into a gri",
     "desc_zh": "Open every project in its own "
   },
@@ -658,7 +329,7 @@
     "topics": [],
     "created_at": "2026-06-13T03:56:37Z",
     "category_hint": "AI Tools",
-    "category": "HTML",
+    "category": "AI Tools",
     "desc_en": "医学考试AI复习工具，自动提炼PPT和教材用的高频考点，生成各类题型及临床素养拓展。",
     "desc_zh": "医学考试AI复习工具，自动提炼PPT和教材用的高频考点，生成"
   },
@@ -672,7 +343,7 @@
     "topics": [],
     "created_at": "2026-06-13T00:32:12Z",
     "category_hint": "AI Tools",
-    "category": "Python",
+    "category": "AI Tools",
     "desc_en": "Turn a long video into branded 9:16 viral reels. Style-driven AI agent: interview → learn from a ref",
     "desc_zh": "Turn a long video into branded"
   },
@@ -694,7 +365,7 @@
     ],
     "created_at": "2026-06-13T02:59:22Z",
     "category_hint": "AI Tools",
-    "category": "Others",
+    "category": "AI Tools",
     "desc_en": "Scan AUR packages for malware using Claude LLM",
     "desc_zh": "Scan AUR packages for malware "
   },
@@ -719,7 +390,7 @@
     ],
     "created_at": "2026-06-10T01:01:42Z",
     "category_hint": "AI Tools",
-    "category": "JavaScript",
+    "category": "AI Tools",
     "desc_en": "vibe coding 的驾驶舱：左边文件，右边/下边终端，中间看清每一次改动。 / The cockpit for vibe coding: browse files on the left, co",
     "desc_zh": "vibe coding 的驾驶舱：左边文件，右边/下边终端，"
   },
@@ -733,7 +404,7 @@
     "topics": [],
     "created_at": "2026-06-12T21:45:48Z",
     "category_hint": "AI Tools",
-    "category": "Others",
+    "category": "AI Tools",
     "desc_en": "人味儿写作 · An AI agent skill: edit people's words without erasing the person behind them",
     "desc_zh": "人味儿写作 · An AI agent skill: edi"
   },
@@ -761,7 +432,7 @@
     ],
     "created_at": "2026-06-09T06:28:20Z",
     "category_hint": "AI Tools",
-    "category": "JavaScript",
+    "category": "AI Tools",
     "desc_en": "Practical reference and patterns for loop engineering,  designing systems that prompt and orchestrat",
     "desc_zh": "Practical reference and patter"
   },
@@ -786,7 +457,7 @@
     ],
     "created_at": "2026-06-08T11:25:21Z",
     "category_hint": "AI Tools",
-    "category": "Python",
+    "category": "AI Tools",
     "desc_en": "A drop-in proxy that compresses bloated code context in real-time, cutting LLM API costs by 50–80% w",
     "desc_zh": "A drop-in proxy that compresse"
   },
@@ -811,7 +482,7 @@
     ],
     "created_at": "2026-06-08T06:29:56Z",
     "category_hint": "AI Tools",
-    "category": "JavaScript",
+    "category": "AI Tools",
     "desc_en": "Inference-native Tokenmaxxing Agent Harness for Loop Engineering",
     "desc_zh": "Inference-native Tokenmaxxing "
   },
@@ -846,7 +517,7 @@
     ],
     "created_at": "2026-06-11T17:34:17Z",
     "category_hint": "AI Tools",
-    "category": "JavaScript",
+    "category": "AI Tools",
     "desc_en": "Hermes Desktop github nous research hermes ai  agent local ai ollama github download open source pc ",
     "desc_zh": "Hermes Desktop github nous res"
   },
@@ -860,7 +531,7 @@
     "topics": [],
     "created_at": "2026-06-07T16:20:13Z",
     "category_hint": "AI Tools",
-    "category": "Python",
+    "category": "AI Tools",
     "desc_en": "AI PPT赛道终结者，史上最最最强 PPT Skill！！！  使用GPT生成豪华的图片格式PPT，然后转换为完全可编辑的PPTX文件。",
     "desc_zh": "AI PPT赛道终结者，史上最最最强 PPT Skill！！"
   },
@@ -874,7 +545,7 @@
     "topics": [],
     "created_at": "2026-06-09T11:05:36Z",
     "category_hint": "AI Tools",
-    "category": "Python",
+    "category": "AI Tools",
     "desc_en": "",
     "desc_zh": ""
   },
@@ -888,7 +559,7 @@
     "topics": [],
     "created_at": "2026-06-12T01:54:12Z",
     "category_hint": "AI Tools",
-    "category": "HTML",
+    "category": "AI Tools",
     "desc_en": "Claude Fable 5 as architect, GPT-5.5 Codex as builder, the repo as memory - a research-backed Claude",
     "desc_zh": "Claude Fable 5 as architect, G"
   },
@@ -923,7 +594,7 @@
     ],
     "created_at": "2026-06-08T08:20:30Z",
     "category_hint": "AI Tools",
-    "category": "Python",
+    "category": "AI Tools",
     "desc_en": "面向 GPT-image-2 的 AI 图片生成 WebUI 工作台，支持 Codex Responses 与 OpenAI 兼容 API 接入，内置公用图库、多类型 Chip 快捷引用、提示词模板、",
     "desc_zh": "面向 GPT-image-2 的 AI 图片生成 WebUI"
   },
@@ -937,7 +608,7 @@
     "topics": [],
     "created_at": "2026-06-08T01:37:06Z",
     "category_hint": "AI Tools",
-    "category": "Python",
+    "category": "AI Tools",
     "desc_en": "",
     "desc_zh": ""
   }
