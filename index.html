@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SourceLens — 每日開源探索</title>
+  <title>SourceLens — Daily Open-Source Discovery</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -47,6 +47,17 @@
       0%   { transform: translate(0, 0) scale(1); }
       50%  { transform: translate(2%, 3%) scale(1.03); }
       100% { transform: translate(-2%, 1%) scale(0.98); }
+    }
+
+    @keyframes cardEntrance {
+      from {
+        opacity: 0;
+        transform: perspective(900px) translateZ(-100px) scale(0.94);
+      }
+      to {
+        opacity: 1;
+        transform: perspective(900px) translateZ(0) scale(1);
+      }
     }
 
     a { color: #7c3aed; text-decoration: none; }
@@ -148,8 +159,11 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       box-shadow: 0 4px 24px rgba(100,60,200,0.08), inset 0 1px 0 rgba(255,255,255,0.95);
-      transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+      transition: border-color 0.25s, box-shadow 0.25s;
       position: relative;
+      transform-style: preserve-3d;
+      will-change: transform;
+      animation: cardEntrance 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
     .card::after {
       content: '';
@@ -158,10 +172,18 @@
       border-radius: inherit;
       background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, transparent 55%);
       pointer-events: none;
+      z-index: 0;
+    }
+    .card-shine {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 1;
+      transition: background 0.08s;
     }
     .card:hover {
       border-color: rgba(167,139,250,0.7);
-      transform: translateY(-4px);
       box-shadow: 0 16px 48px rgba(100,60,200,0.14), 0 0 24px rgba(139,92,246,0.15), inset 0 1px 0 rgba(255,255,255,1);
     }
 
@@ -316,34 +338,34 @@
       <span class="brand-icon">🔭</span>
       <div>
         <h1>SourceLens</h1>
-        <p>每日精選開源專案，由 AI 自動分類與摘要</p>
+        <p>Daily open-source discovery · 7-day rolling window · AI-classified by Microsoft Phi-4</p>
       </div>
     </div>
-    <span id="last-updated">載入中…</span>
+    <span id="last-updated">Loading…</span>
   </div>
 </header>
 
 <nav>
   <div class="tabs" id="tabs">
-    <button class="tab active" data-cat="All">全部分類</button>
-    <button class="tab" data-cat="AI Tools">AI 工具</button>
-    <button class="tab" data-cat="Dev Tools">開發工具</button>
-    <button class="tab" data-cat="Data & Analytics">資料分析</button>
-    <button class="tab" data-cat="Security">資訊安全</button>
-    <button class="tab" data-cat="Design & Creative">設計創意</button>
+    <button class="tab active" data-cat="All">All</button>
+    <button class="tab" data-cat="AI Tools">AI Tools</button>
+    <button class="tab" data-cat="Dev Tools">Dev Tools</button>
+    <button class="tab" data-cat="Data & Analytics">Data & Analytics</button>
+    <button class="tab" data-cat="Security">Security</button>
+    <button class="tab" data-cat="Design & Creative">Design & Creative</button>
   </div>
 </nav>
 
 <main>
   <p id="stats"></p>
-  <div id="message">載入中…</div>
+  <div id="message">Loading…</div>
   <div id="cards"></div>
 </main>
 
 <footer>
-  SourceLens · 每日透過 GitHub Actions 自動更新 &nbsp;|&nbsp;
-  資料來源：<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>，
-  摘要由 <a href="https://azure.microsoft.com/products/ai-foundry" target="_blank" rel="noopener">Microsoft Azure AI Foundry</a> (Phi-4) 生成
+  SourceLens · Auto-updated daily via GitHub Actions &nbsp;|&nbsp;
+  Data: <a href="https://github.com" target="_blank" rel="noopener">GitHub Search API</a> &nbsp;·&nbsp;
+  AI: <a href="https://azure.microsoft.com/products/ai-foundry" target="_blank" rel="noopener">Microsoft Azure AI Foundry</a> (Phi-4-mini-instruct)
 </footer>
 
 <script>
@@ -356,14 +378,13 @@
     Haskell: "#5e5086", Lua: "#000080", R: "#198CE7",
   };
 
-  // Chinese display names for categories
-  const CAT_ZH = {
-    "All":               "全部分類",
-    "AI Tools":          "AI 工具",
-    "Dev Tools":         "開發工具",
-    "Data & Analytics":  "資料分析",
-    "Security":          "資訊安全",
-    "Design & Creative": "設計創意",
+  const CAT_LABEL = {
+    "All":               "All",
+    "AI Tools":          "AI Tools",
+    "Dev Tools":         "Dev Tools",
+    "Data & Analytics":  "Data & Analytics",
+    "Security":          "Security",
+    "Design & Creative": "Design & Creative",
   };
 
   let allRepos = [];
@@ -379,7 +400,7 @@
       render();
     } catch (err) {
       document.getElementById("message").textContent =
-        "無法載入 repos.json，請先執行 GitHub Actions 工作流程。";
+        "Failed to load repos.json. Please run the GitHub Actions workflow first.";
       console.error(err);
     }
   }
@@ -388,38 +409,66 @@
     const el = document.getElementById("last-updated");
     if (lastModified) {
       const d = new Date(lastModified);
-      const formatted = d.toLocaleString("zh-TW", {
-        year: "numeric", month: "2-digit", day: "2-digit",
+      const formatted = d.toLocaleString("en-US", {
+        year: "numeric", month: "short", day: "numeric",
         hour: "2-digit", minute: "2-digit", timeZoneName: "short"
       });
-      el.textContent = "更新時間：" + formatted;
+      el.textContent = "Updated: " + formatted;
     } else {
       el.textContent = "";
     }
   }
 
-  function buildCard(repo) {
+  function addTilt(card) {
+    card.addEventListener("mouseenter", () => {
+      card.style.transition = "border-color 0.25s, box-shadow 0.25s";
+    });
+    card.addEventListener("mousemove", e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      const rX = (-y * 11).toFixed(2);
+      const rY = (x * 11).toFixed(2);
+      card.style.transform = `perspective(700px) rotateX(${rX}deg) rotateY(${rY}deg) translateY(-6px)`;
+      const shine = card.querySelector(".card-shine");
+      if (shine) {
+        const px = ((x + 0.5) * 100).toFixed(1);
+        const py = ((y + 0.5) * 100).toFixed(1);
+        shine.style.background = `radial-gradient(circle at ${px}% ${py}%, rgba(255,255,255,0.32) 0%, transparent 65%)`;
+      }
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transition = "transform 0.5s ease, border-color 0.25s, box-shadow 0.25s";
+      card.style.transform = "";
+      const shine = card.querySelector(".card-shine");
+      if (shine) shine.style.background = "";
+    });
+  }
+
+  function buildCard(repo, index = 0) {
     const langColor = LANG_COLORS[repo.language] || "#aaa";
     const category  = repo.category || repo.category_hint || "Dev Tools";
-    const catZh     = CAT_ZH[category] || category;
-    const descZh    = repo.desc_zh || "";
-    const descEn    = repo.desc_en || repo.description || "";
-    const stars     = (repo.stars ?? 0).toLocaleString("zh-TW");
+    const catLabel  = CAT_LABEL[category] || category;
+    const descPrimary = repo.desc_en || repo.desc_zh || "";
+    const descSub     = (!repo.desc_en && repo.desc_zh) ? "" : (repo.description || "");
+    const stars     = (repo.stars ?? 0).toLocaleString("en-US");
     const lang      = repo.language || "—";
 
     const card = document.createElement("article");
     card.className = "card";
+    card.style.animationDelay = `${Math.min(index * 0.07, 0.56)}s`;
     card.innerHTML = `
+      <div class="card-shine"></div>
       <div class="card-bar bar-${escHtml(category)}"></div>
       <div class="card-body">
         <div class="card-header">
           <a class="repo-name" href="${escHtml(repo.url)}" target="_blank" rel="noopener">
             ${escHtml(repo.full_name)}
           </a>
-          <span class="badge badge-${escHtml(category)}">${escHtml(catZh)}</span>
+          <span class="badge badge-${escHtml(category)}">${escHtml(catLabel)}</span>
         </div>
-        ${descZh ? `<p class="desc-zh">${escHtml(descZh)}</p>` : ""}
-        ${descEn ? `<p class="desc-en">${escHtml(descEn)}</p>` : ""}
+        ${descPrimary ? `<p class="desc-zh">${escHtml(descPrimary)}</p>` : ""}
+        ${descSub ? `<p class="desc-en">${escHtml(descSub)}</p>` : ""}
         <div class="meta">
           <span class="stars">⭐ ${stars}</span>
           <span class="lang-pill">
@@ -428,10 +477,11 @@
           </span>
         </div>
         <a class="btn-github" href="${escHtml(repo.url)}" target="_blank" rel="noopener">
-          前往 GitHub →
+          View on GitHub →
         </a>
       </div>
     `;
+    addTilt(card);
     return card;
   }
 
@@ -447,7 +497,7 @@
     container.innerHTML = "";
 
     if (filtered.length === 0) {
-      msg.textContent = "此分類目前沒有專案。";
+      msg.textContent = "No projects in this category yet.";
       msg.style.display = "";
       stats.textContent = "";
       return;
@@ -455,12 +505,12 @@
 
     msg.textContent = "";
     msg.style.display = "none";
-    const catLabel = activeCategory === "All" ? "" : `「${CAT_ZH[activeCategory]}」`;
+    const catLabel = activeCategory === "All" ? "" : ` in "${CAT_LABEL[activeCategory]}"`;
     stats.textContent =
-      `共找到 ${filtered.length} 個${catLabel}開源專案 · 今日合計 ${allRepos.length} 個`;
+      `${filtered.length} repos found${catLabel} · ${allRepos.length} total (7-day rolling)`;
 
     const frag = document.createDocumentFragment();
-    filtered.forEach(r => frag.appendChild(buildCard(r)));
+    filtered.forEach((r, i) => frag.appendChild(buildCard(r, i)));
     container.appendChild(frag);
   }
 
