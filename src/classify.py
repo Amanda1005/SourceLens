@@ -14,7 +14,7 @@ from azure.core.credentials import AzureKeyCredential
 
 DATA_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
-CATEGORIES = ["AI Tools", "Dev Tools", "Data & Analytics", "Security", "Design & Creative"]
+CATEGORIES = ["AI Tools", "Dev Tools", "Data & Analytics", "Security", "Design & Creative", "Web3 / Blockchain"]
 
 AZURE_ENDPOINT = "https://agentry-resource.services.ai.azure.com"
 MODEL_NAME     = "Phi-4-mini-instruct"

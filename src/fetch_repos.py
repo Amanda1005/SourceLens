@@ -21,6 +21,7 @@ SEARCH_QUERIES = {
     "Data & Analytics":  ["analytics", "data visualization", "dashboard", "pandas", "jupyter"],
     "Security":          ["cybersecurity", "vulnerability", "authentication", "penetration testing", "encryption"],
     "Design & Creative": ["design system", "figma plugin", "animation", "generative art", "UI components"],
+    "Web3 / Blockchain": ["blockchain", "smart contract", "web3", "solidity", "ethereum", "defi", "NFT", "dapp", "wallet crypto"],
 }
 
 GITHUB_SEARCH_URL = "https://api.github.com/search/repositories"
