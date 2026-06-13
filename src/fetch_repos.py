@@ -11,7 +11,7 @@ from pathlib import Path
 
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
-MAX_REPOS = 40  # hard cap to keep classify.py fast
+MAX_REPOS = 10  # hard cap to keep classify.py fast (~5 min total)
 
 SEARCH_QUERIES = {
     "AI Tools": [

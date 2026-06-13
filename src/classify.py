@@ -85,11 +85,13 @@ def main():
     if not api_key:
         raise EnvironmentError("AZURE_AI_KEY is not set.")
 
-    client = OpenAI(base_url=AZURE_ENDPOINT, api_key=api_key)
+    client = OpenAI(base_url=AZURE_ENDPOINT, api_key=api_key, timeout=25.0)
 
-    print(f"Classifying {len(repos)} repos with {MODEL_NAME} via Azure AI Foundry …")
-    for i, repo in enumerate(repos, 1):
-        print(f"  [{i}/{len(repos)}] {repo['full_name']}")
+    unclassified = [r for r in repos if not r.get("desc_zh")]
+    print(f"Classifying {len(unclassified)}/{len(repos)} repos with {MODEL_NAME} …")
+
+    for i, repo in enumerate(unclassified, 1):
+        print(f"  [{i}/{len(unclassified)}] {repo['full_name']}")
         classification = classify_repo(client, repo)
         repo.update(classification)
         time.sleep(0.5)
