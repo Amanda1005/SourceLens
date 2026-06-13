@@ -356,7 +356,7 @@
       <img src="sourcelens.png" alt="SourceLens" class="brand-logo" />
       <div>
         <h1>SourceLens</h1>
-        <p>Repos created in the last 30 days · 1+ star · Keyword-matched · AI-classified daily</p>
+        <p>Created within 90 days · 10+ stars · Keyword-matched · AI-classified daily</p>
       </div>
     </div>
     <span id="last-updated">Loading…</span>
@@ -550,7 +550,7 @@
     if (activeCat  !== "All") parts.push(`"${CAT_LABEL[activeCat]}"`);
     if (activeLang !== "All") parts.push(`${activeLang}`);
     const label = parts.length ? ` · ${parts.join(" + ")}` : "";
-    stats.textContent = `${filtered.length} repos found${label} · ${allRepos.length} total (30-day rolling)`;
+    stats.textContent = `${filtered.length} repos found${label} · ${allRepos.length} total (90-day rolling)`;
 
     const frag = document.createDocumentFragment();
     filtered.forEach((r, i) => frag.appendChild(buildCard(r, i)));

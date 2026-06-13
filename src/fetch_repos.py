@@ -12,7 +12,7 @@ from pathlib import Path
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
 MAX_PER_CATEGORY = 5   # max new repos per category per run
-KEEP_DAYS        = 30  # rolling window size
+KEEP_DAYS        = 90  # rolling window size
 
 SEARCH_QUERIES = {
     "AI Tools":          ["ai agent", "LLM", "chatbot", "RAG", "fine-tuning"],
@@ -28,7 +28,7 @@ HEADERS = {"Accept": "application/vnd.github+json"}
 
 def search_repos(query: str, date_since: str) -> list[dict]:
     params = {
-        "q": f"{query} created:>{date_since} stars:>=1",
+        "q": f"{query} created:>{date_since} stars:>=10",
         "sort": "stars",
         "order": "desc",
         "per_page": 10,
@@ -57,9 +57,9 @@ def extract_fields(item: dict, category_hint: str) -> dict:
 
 
 def fetch_new_repos() -> list[dict]:
-    since = datetime.now(timezone.utc) - timedelta(days=30)
+    since = datetime.now(timezone.utc) - timedelta(days=90)
     date_since = since.strftime("%Y-%m-%d")
-    print(f"Fetching repos created after {date_since} (last 30 days, stars > 1) …")
+    print(f"Fetching repos created after {date_since} (last 90 days, stars >= 10) …")
 
     seen: set[str] = set()
     results: list[dict] = []
