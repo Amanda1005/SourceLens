@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SourceLens — 每日開源探索</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d1117;
+      --surface:  #161b22;
+      --border:   #30363d;
+      --text:     #c9d1d9;
+      --muted:    #8b949e;
+      --accent:   #58a6ff;
+      --radius:   10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "PingFang TC", "Noto Sans TC", -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand-icon { font-size: 1.6rem; }
+    .brand h1 { font-size: 1.25rem; font-weight: 700; color: #fff; letter-spacing: 0.02em; }
+    .brand p  { font-size: 0.78rem; color: var(--muted); }
+    #last-updated { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+
+    /* ── Nav tabs ── */
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .tabs {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 13px 18px;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.15s, border-color 0.15s;
+      font-family: inherit;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+
+    /* ── Main ── */
+    main {
+      max-width: 1200px;
+      margin: 28px auto;
+      padding: 0 24px;
+    }
+    #stats {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* ── Card grid ── */
+    #cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .card:hover {
+      border-color: #58a6ff66;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px #00000055;
+    }
+
+    /* colored top bar per category */
+    .card-bar {
+      height: 4px;
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .bar-AI\ Tools      { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+    .bar-Dev\ Tools     { background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
+    .bar-Data\ \&\ Analytics { background: linear-gradient(90deg, #10b981, #34d399); }
+    .bar-Security       { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+    .bar-Design\ \&\ Creative { background: linear-gradient(90deg, #ec4899, #f472b6); }
+
+    .card-body {
+      padding: 18px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    /* header row: name + badge */
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .repo-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+    .repo-name:hover { color: var(--accent); text-decoration: none; }
+
+    /* category badge */
+    .badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .badge-AI\ Tools      { background: #7c3aed22; color: #a78bfa; border: 1px solid #7c3aed55; }
+    .badge-Dev\ Tools     { background: #0ea5e922; color: #38bdf8; border: 1px solid #0ea5e955; }
+    .badge-Data\ \&\ Analytics { background: #10b98122; color: #34d399; border: 1px solid #10b98155; }
+    .badge-Security       { background: #f59e0b22; color: #fbbf24; border: 1px solid #f59e0b55; }
+    .badge-Design\ \&\ Creative { background: #ec489922; color: #f472b6; border: 1px solid #ec489955; }
+
+    /* descriptions — zh primary, en secondary */
+    .desc-zh {
+      font-size: 0.92rem;
+      color: var(--text);
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    .desc-en {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* meta: stars + language */
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: auto;
+      padding-top: 6px;
+      flex-wrap: wrap;
+    }
+    .stars { display: flex; align-items: center; gap: 4px; }
+    .lang-pill {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .lang-dot {
+      display: inline-block;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #aaa;
+      flex-shrink: 0;
+    }
+
+    /* button */
+    .btn-github {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+      padding: 7px 14px;
+      background: #21262d;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s;
+      align-self: flex-start;
+      font-family: inherit;
+    }
+    .btn-github:hover {
+      background: #30363d;
+      border-color: #8b949e;
+      text-decoration: none;
+    }
+
+    /* empty / loading */
+    #message {
+      text-align: center;
+      color: var(--muted);
+      padding: 60px 0;
+      font-size: 1rem;
+    }
+
+    /* footer */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      border-top: 1px solid var(--border);
+      margin-top: 48px;
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      #cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-icon">🔭</span>
+      <div>
+        <h1>SourceLens</h1>
+        <p>每日精選開源專案，由 AI 自動分類與摘要</p>
+      </div>
+    </div>
+    <span id="last-updated">載入中…</span>
+  </div>
+</header>
+
+<nav>
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-cat="All">全部分類</button>
+    <button class="tab" data-cat="AI Tools">AI 工具</button>
+    <button class="tab" data-cat="Dev Tools">開發工具</button>
+    <button class="tab" data-cat="Data & Analytics">資料分析</button>
+    <button class="tab" data-cat="Security">資訊安全</button>
+    <button class="tab" data-cat="Design & Creative">設計創意</button>
+  </div>
+</nav>
+
+<main>
+  <p id="stats"></p>
+  <div id="message">載入中…</div>
+  <div id="cards"></div>
+</main>
+
+<footer>
+  SourceLens · 每日透過 GitHub Actions 自動更新 &nbsp;|&nbsp;
+  資料來源：<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>，
+  摘要由 <a href="https://azure.microsoft.com/products/ai-foundry" target="_blank" rel="noopener">Microsoft Azure AI Foundry</a> (Phi-4) 生成
+</footer>
+
+<script>
+  const LANG_COLORS = {
+    JavaScript: "#f1e05a", TypeScript: "#3178c6", Python: "#3572A5",
+    Rust: "#dea584", Go: "#00ADD8", Java: "#b07219", "C++": "#f34b7d",
+    C: "#555555", "C#": "#178600", Ruby: "#701516", Swift: "#F05138",
+    Kotlin: "#A97BFF", PHP: "#4F5D95", Shell: "#89e051", HTML: "#e34c26",
+    CSS: "#563d7c", Dart: "#00B4AB", Scala: "#c22d40", Elixir: "#6e4a7e",
+    Haskell: "#5e5086", Lua: "#000080", R: "#198CE7",
+  };
+
+  // Chinese display names for categories
+  const CAT_ZH = {
+    "All":               "全部分類",
+    "AI Tools":          "AI 工具",
+    "Dev Tools":         "開發工具",
+    "Data & Analytics":  "資料分析",
+    "Security":          "資訊安全",
+    "Design & Creative": "設計創意",
+  };
+
+  let allRepos = [];
+  let activeCategory = "All";
+
+  async function loadData() {
+    try {
+      const resp = await fetch("data/repos.json");
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      allRepos = await resp.json();
+      renderTimestamp(resp.headers.get("last-modified"));
+      render();
+    } catch (err) {
+      document.getElementById("message").textContent =
+        "無法載入 repos.json，請先執行 GitHub Actions 工作流程。";
+      console.error(err);
+    }
+  }
+
+  function renderTimestamp(lastModified) {
+    const el = document.getElementById("last-updated");
+    if (lastModified) {
+      const d = new Date(lastModified);
+      const formatted = d.toLocaleString("zh-TW", {
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit", timeZoneName: "short"
+      });
+      el.textContent = "更新時間：" + formatted;
+    } else {
+      el.textContent = "";
+    }
+  }
+
+  function buildCard(repo) {
+    const langColor = LANG_COLORS[repo.language] || "#aaa";
+    const category  = repo.category || repo.category_hint || "Dev Tools";
+    const catZh     = CAT_ZH[category] || category;
+    const descZh    = repo.desc_zh || "";
+    const descEn    = repo.desc_en || repo.description || "";
+    const stars     = (repo.stars ?? 0).toLocaleString("zh-TW");
+    const lang      = repo.language || "—";
+
+    const card = document.createElement("article");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="card-bar bar-${escHtml(category)}"></div>
+      <div class="card-body">
+        <div class="card-header">
+          <a class="repo-name" href="${escHtml(repo.url)}" target="_blank" rel="noopener">
+            ${escHtml(repo.full_name)}
+          </a>
+          <span class="badge badge-${escHtml(category)}">${escHtml(catZh)}</span>
+        </div>
+        ${descZh ? `<p class="desc-zh">${escHtml(descZh)}</p>` : ""}
+        ${descEn ? `<p class="desc-en">${escHtml(descEn)}</p>` : ""}
+        <div class="meta">
+          <span class="stars">⭐ ${stars}</span>
+          <span class="lang-pill">
+            <span class="lang-dot" style="background:${langColor}"></span>
+            ${escHtml(lang)}
+          </span>
+        </div>
+        <a class="btn-github" href="${escHtml(repo.url)}" target="_blank" rel="noopener">
+          前往 GitHub →
+        </a>
+      </div>
+    `;
+    return card;
+  }
+
+  function render() {
+    const filtered = activeCategory === "All"
+      ? allRepos
+      : allRepos.filter(r => (r.category || r.category_hint) === activeCategory);
+
+    const container = document.getElementById("cards");
+    const msg       = document.getElementById("message");
+    const stats     = document.getElementById("stats");
+
+    container.innerHTML = "";
+
+    if (filtered.length === 0) {
+      msg.textContent = "此分類目前沒有專案。";
+      stats.textContent = "";
+      return;
+    }
+
+    msg.textContent = "";
+    const catLabel = activeCategory === "All" ? "" : `「${CAT_ZH[activeCategory]}」`;
+    stats.textContent =
+      `共找到 ${filtered.length} 個${catLabel}開源專案 · 今日合計 ${allRepos.length} 個`;
+
+    const frag = document.createDocumentFragment();
+    filtered.forEach(r => frag.appendChild(buildCard(r)));
+    container.appendChild(frag);
+  }
+
+  document.getElementById("tabs").addEventListener("click", e => {
+    const btn = e.target.closest(".tab");
+    if (!btn) return;
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    btn.classList.add("active");
+    activeCategory = btn.dataset.cat;
+    render();
+  });
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  loadData();
+</script>
+</body>
+</html>
