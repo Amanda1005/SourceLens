@@ -18,7 +18,7 @@
     }
 
     body {
-      background: linear-gradient(145deg, #f5f0ff 0%, #eef0ff 50%, #f0f8ff 100%);
+      background: #fdfaf7;
       color: var(--text);
       font-family: "PingFang TC", "Noto Sans TC", -apple-system, BlinkMacSystemFont,
                    "Segoe UI", Helvetica, Arial, sans-serif;
@@ -33,10 +33,11 @@
       position: fixed;
       inset: -20%;
       background:
-        radial-gradient(ellipse at 15% 20%, rgba(167, 139, 250, 0.55) 0%, transparent 50%),
-        radial-gradient(ellipse at 85% 15%, rgba(96, 165, 250, 0.48) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, rgba(244, 114, 182, 0.42) 0%, transparent 50%),
-        radial-gradient(ellipse at 10% 75%, rgba(52, 211, 153, 0.35) 0%, transparent 50%);
+        radial-gradient(ellipse at 15% 20%, rgba(196, 181, 253, 0.38) 0%, transparent 52%),
+        radial-gradient(ellipse at 82% 12%, rgba(147, 197, 253, 0.32) 0%, transparent 52%),
+        radial-gradient(ellipse at 68% 82%, rgba(249, 168, 212, 0.28) 0%, transparent 52%),
+        radial-gradient(ellipse at 8%  72%, rgba(110, 231, 183, 0.24) 0%, transparent 52%),
+        radial-gradient(ellipse at 50% 50%, rgba(253, 230, 138, 0.15) 0%, transparent 45%);
       animation: blobDrift 18s ease-in-out infinite alternate;
       z-index: -1;
       pointer-events: none;
@@ -374,6 +375,7 @@
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       allRepos = await resp.json();
       renderTimestamp(resp.headers.get("last-modified"));
+      document.getElementById("message").style.display = "none";
       render();
     } catch (err) {
       document.getElementById("message").textContent =
@@ -446,11 +448,13 @@
 
     if (filtered.length === 0) {
       msg.textContent = "此分類目前沒有專案。";
+      msg.style.display = "";
       stats.textContent = "";
       return;
     }
 
     msg.textContent = "";
+    msg.style.display = "none";
     const catLabel = activeCategory === "All" ? "" : `「${CAT_ZH[activeCategory]}」`;
     stats.textContent =
       `共找到 ${filtered.length} 個${catLabel}開源專案 · 今日合計 ${allRepos.length} 個`;
