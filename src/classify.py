@@ -107,7 +107,7 @@ def main():
         credential=AzureKeyCredential(api_key),
     )
 
-    MAX_PER_RUN = 20
+    MAX_PER_RUN = 10
     unclassified = [r for r in repos if not r.get("desc_zh")][:MAX_PER_RUN]
     print(f"Classifying {len(unclassified)}/{len(repos)} repos with {MODEL_NAME} (max {MAX_PER_RUN} per run) ...")
 
