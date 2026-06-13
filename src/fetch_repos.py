@@ -1,6 +1,6 @@
 """
-fetch_repos.py — Search GitHub for repos from the past 30 days by topic keywords
-and merge into a rolling 30-day window. Older entries are pruned automatically.
+fetch_repos.py — Search GitHub for repos by topic keywords and merge into a
+rolling window. Each category has its own search window and star threshold.
 """
 
 import json
@@ -11,26 +11,52 @@ from pathlib import Path
 
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
-MAX_PER_CATEGORY = 5   # max new repos per category per run
-KEEP_DAYS        = 90  # rolling window size
+MAX_PER_CATEGORY = 5  # max new repos per category per run
 
-SEARCH_QUERIES = {
-    "AI Tools":          ["ai agent", "LLM", "chatbot", "RAG", "fine-tuning"],
-    "Dev Tools":         ["CLI", "vscode extension", "devtools", "terminal tool", "code generator",
-                          "language:c", "language:c++"],
-    "Data & Analytics":  ["analytics", "data visualization", "dashboard", "pandas", "jupyter"],
-    "Security":          ["cybersecurity", "vulnerability", "authentication", "penetration testing", "encryption"],
-    "Design & Creative": ["design system", "figma plugin", "animation", "generative art", "UI components"],
-    "Web3 / Blockchain": ["blockchain", "smart contract", "web3", "solidity", "ethereum", "defi", "NFT", "dapp", "wallet crypto"],
+# days: search window for created:>DATE filter
+# stars: minimum star count
+# queries: GitHub search keywords
+CATEGORY_CONFIG = {
+    "AI Tools": {
+        "days":    90,
+        "stars":   10,
+        "queries": ["ai agent", "LLM", "chatbot", "RAG", "fine-tuning"],
+    },
+    "Dev Tools": {
+        "days":    180,
+        "stars":   10,
+        "queries": ["CLI", "vscode extension", "devtools", "terminal tool", "code generator",
+                    "language:c", "language:c++"],
+    },
+    "Data & Analytics": {
+        "days":    180,
+        "stars":   10,
+        "queries": ["analytics", "data visualization", "dashboard", "pandas", "jupyter"],
+    },
+    "Security": {
+        "days":    365,
+        "stars":   50,
+        "queries": ["cybersecurity", "vulnerability", "authentication", "penetration testing", "encryption"],
+    },
+    "Design & Creative": {
+        "days":    180,
+        "stars":   10,
+        "queries": ["design system", "figma plugin", "animation", "generative art", "UI components"],
+    },
+    "Web3 / Blockchain": {
+        "days":    365,
+        "stars":   100,
+        "queries": ["blockchain", "smart contract", "web3", "solidity", "ethereum", "defi", "NFT", "dapp", "wallet crypto"],
+    },
 }
 
 GITHUB_SEARCH_URL = "https://api.github.com/search/repositories"
 HEADERS = {"Accept": "application/vnd.github+json"}
 
 
-def search_repos(query: str, date_since: str) -> list[dict]:
+def search_repos(query: str, date_since: str, stars: int) -> list[dict]:
     params = {
-        "q": f"{query} created:>{date_since} stars:>=10",
+        "q": f"{query} created:>{date_since} stars:>={stars}",
         "sort": "stars",
         "order": "desc",
         "per_page": 10,
@@ -59,20 +85,21 @@ def extract_fields(item: dict, category_hint: str) -> dict:
 
 
 def fetch_new_repos() -> list[dict]:
-    since = datetime.now(timezone.utc) - timedelta(days=90)
-    date_since = since.strftime("%Y-%m-%d")
-    print(f"Fetching repos created after {date_since} (last 90 days, stars >= 10) …")
-
     seen: set[str] = set()
     results: list[dict] = []
 
-    for category, queries in SEARCH_QUERIES.items():
+    for category, cfg in CATEGORY_CONFIG.items():
+        days  = cfg["days"]
+        stars = cfg["stars"]
+        since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+        print(f"[{category}] searching last {days} days, stars >= {stars} …")
+
         cat_count = 0
-        for query in queries:
+        for query in cfg["queries"]:
             if cat_count >= MAX_PER_CATEGORY:
                 break
-            print(f"  [{category}] {query!r}")
-            items = search_repos(query, date_since)
+            print(f"  {query!r}")
+            items = search_repos(query, since, stars)
             for item in items:
                 if cat_count >= MAX_PER_CATEGORY:
                     break
@@ -83,14 +110,17 @@ def fetch_new_repos() -> list[dict]:
                     cat_count += 1
             time.sleep(1)
 
-    print(f"Found {len(results)} new repos.")
+    print(f"Found {len(results)} new repos total.")
     return results
 
 
 def prune_old(repos: list[dict]) -> list[dict]:
-    cutoff = datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)
+    now = datetime.now(timezone.utc)
     kept = []
     for r in repos:
+        category = r.get("category") or r.get("category_hint", "")
+        keep_days = CATEGORY_CONFIG.get(category, {}).get("days", 180)
+        cutoff = now - timedelta(days=keep_days)
         try:
             created = datetime.fromisoformat(r["created_at"].replace("Z", "+00:00"))
             if created >= cutoff:
@@ -127,7 +157,7 @@ def main():
             existing_names.add(repo["full_name"])
 
     merged = prune_old(merged)
-    print(f"Rolling window total: {len(merged)} repos (after pruning).")
+    print(f"Total after pruning: {len(merged)} repos.")
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(merged, f, ensure_ascii=False, indent=2)
