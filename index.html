@@ -84,8 +84,8 @@
       gap: 16px;
       flex-wrap: wrap;
     }
-    .brand { display: flex; align-items: center; gap: 10px; }
-    .brand-icon { font-size: 1.6rem; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-logo { width: 88px; height: 88px; object-fit: contain; display: block; flex-shrink: 0; }
     .brand h1 {
       font-size: 1.25rem;
       font-weight: 700;
@@ -348,7 +348,7 @@
 <header>
   <div class="header-inner">
     <div class="brand">
-      <span class="brand-icon">🔭</span>
+      <img src="sourcelens.png" alt="SourceLens" class="brand-logo" />
       <div>
         <h1>SourceLens</h1>
         <p>New GitHub repos by language · 30-day rolling window · Auto-updated daily</p>
@@ -384,8 +384,8 @@
 
 <footer>
   SourceLens · Auto-updated daily via GitHub Actions &nbsp;|&nbsp;
-  Data: <a href="https://github.com" target="_blank" rel="noopener">GitHub Search API</a> &nbsp;·&nbsp;
-  AI: <a href="https://azure.microsoft.com/products/ai-foundry" target="_blank" rel="noopener">Microsoft Azure AI Foundry</a> (Phi-4-mini-instruct)
+  Data: <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Search API</a> &nbsp;·&nbsp;
+  AI: <a href="https://azure.microsoft.com/products/ai-foundry" target="_blank" rel="noopener noreferrer">Microsoft Azure AI Foundry</a> (Phi-4-mini-instruct)
 </footer>
 
 <script>
@@ -497,7 +497,7 @@
       <div class="card-bar bar-${escHtml(category)}"></div>
       <div class="card-body">
         <div class="card-header">
-          <a class="repo-name" href="${escHtml(repo.url)}" target="_blank" rel="noopener">
+          <a class="repo-name" href="${safeUrl(repo.url)}" target="_blank" rel="noopener noreferrer">
             ${escHtml(repo.full_name)}
           </a>
           <span class="badge badge-${escHtml(category)}">${escHtml(catLabel)}</span>
@@ -511,7 +511,7 @@
             ${escHtml(lang)}
           </span>
         </div>
-        <a class="btn-github" href="${escHtml(repo.url)}" target="_blank" rel="noopener">
+        <a class="btn-github" href="${safeUrl(repo.url)}" target="_blank" rel="noopener noreferrer">
           View on GitHub →
         </a>
       </div>
@@ -576,6 +576,14 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
+  }
+
+  function safeUrl(url) {
+    try {
+      const u = new URL(String(url));
+      return (u.protocol === "https:" && u.hostname.endsWith("github.com"))
+        ? u.href : "#";
+    } catch { return "#"; }
   }
 
   loadData();

@@ -25,14 +25,26 @@ SYSTEM_PROMPT = (
 )
 
 
+def _safe(value: str, max_len: int = 200) -> str:
+    """Truncate and strip control characters from user-supplied strings."""
+    return str(value).replace("\n", " ").replace("\r", " ")[:max_len]
+
+
 def build_user_prompt(repo: dict) -> str:
+    name     = _safe(repo.get("name", ""), 100)
+    desc     = _safe(repo.get("description", ""), 200)
+    language = _safe(repo.get("language", ""), 50)
+    topics   = _safe(", ".join(repo.get("topics", [])[:10]), 150)
+    hint     = _safe(repo.get("category_hint", repo.get("category", "")), 50)
     return f"""Classify this GitHub repository and write short descriptions.
 
-Name: {repo['name']}
-Description: {repo['description']}
-Language: {repo['language']}
-Topics: {', '.join(repo['topics'])}
-Category hint: {repo.get('category_hint', repo.get('category', ''))}
+[REPO DATA START]
+Name: {name}
+Description: {desc}
+Language: {language}
+Topics: {topics}
+Category hint: {hint}
+[REPO DATA END]
 
 Return JSON with exactly these fields:
 {{
