@@ -40,7 +40,7 @@ Built for the **Microsoft Agents League @ AI Skills Fest 2026** — Creative App
          ▼
 📡 fetch_repos.py
    • Queries GitHub Search API across 5 categories (12 keyword queries)
-   • Filters: created in last 24h, stars > 1
+   • Filters: created in last 7 days, stars > 1
    • Limits to 3 repos per category (15 max)
    • Merges with existing data, prunes repos > 7 days old
          │
