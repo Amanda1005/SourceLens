@@ -105,13 +105,19 @@ def main():
     client = ChatCompletionsClient(
         endpoint=AZURE_ENDPOINT,
         credential=AzureKeyCredential(api_key),
+        connection_timeout=10,
+        read_timeout=45,
     )
 
-    MAX_PER_RUN = 10
-    unclassified = [r for r in repos if not r.get("desc_zh")][:MAX_PER_RUN]
-    print(f"Classifying {len(unclassified)}/{len(repos)} repos with {MODEL_NAME} (max {MAX_PER_RUN} per run) ...")
+    TIME_BUDGET = 6 * 60  # stop after 6 minutes regardless of count
+    deadline = time.time() + TIME_BUDGET
+    unclassified = [r for r in repos if not r.get("desc_zh")]
+    print(f"Classifying up to {len(unclassified)} repos with {MODEL_NAME} (6-min budget) ...")
 
     for i, repo in enumerate(unclassified, 1):
+        if time.time() > deadline:
+            print(f"  [time budget reached, stopping after {i-1} repos]")
+            break
         print(f"  [{i}/{len(unclassified)}] {repo['full_name']}")
         classification = classify_repo(client, repo)
         repo.update(classification)
