@@ -1,6 +1,6 @@
 # SourceLens
 
-> Discover the best new open-source projects on GitHub — AI-classified, 10+ stars, updated daily.
+> Discover the best new open-source projects on GitHub — AI-classified, quality-filtered, updated daily.
 
 Live Demo: [amanda1005.github.io/SourceLens](https://amanda1005.github.io/SourceLens)
 
@@ -10,14 +10,14 @@ Built for the **Microsoft Agents League @ AI Skills Fest 2026** — Creative App
 
 ## What is SourceLens?
 
-SourceLens is an automated open-source discovery engine. Every day, a GitHub Actions pipeline searches GitHub for newly created repositories, filters by quality signals (10+ stars, created within 90 days), classifies them using **Microsoft Phi-4-mini-instruct via Azure AI Foundry (Foundry IQ)**, and publishes the results to a static web interface — with zero manual effort.
+SourceLens is an automated open-source discovery engine. Every day, a GitHub Actions pipeline searches GitHub for newly created repositories, filters by quality signals (star count, recency), classifies them using **Microsoft Phi-4-mini-instruct via Azure AI Foundry (Foundry IQ)**, and publishes the results to a static web interface — with zero manual effort.
 
 ## Features
 
 - AI Classification — Microsoft Phi-4-mini-instruct (Azure AI Foundry / Foundry IQ)
-- 90-Day Rolling Window — daily fetch merges new repos, auto-removes entries older than 90 days
+- Per-Category Search Windows — each category has its own recency and star threshold tuned to the pace of that field
 - Dual Filtering — browse by topic category and by programming language simultaneously
-- Quality Filter — only repos with 10+ stars are included
+- Quality Filter — star threshold varies by category (10 to 100+) to surface genuinely useful projects
 - Fully Automated — GitHub Actions triggers every day at UTC 00:00, no manual work needed
 - Zero Infrastructure Cost — static site on GitHub Pages, no backend or database
 - Security Hardened — safeUrl() XSS protection, prompt injection mitigation, noreferrer on all links
@@ -39,10 +39,10 @@ GitHub Actions (UTC 00:00 daily)
          |
          v
 fetch_repos.py
-   - Queries GitHub Search API with 25 keyword combinations
-   - Filters: created within 90 days, 10+ stars
+   - Queries GitHub Search API with per-category settings
+   - Each category has its own search window and star threshold
    - Limits 5 repos per category, deduplicates by full_name
-   - Maintains rolling 90-day window (auto-prunes old entries)
+   - Prunes repos that fall outside their category's window
          |
          v
 classify.py  <--- Microsoft Azure AI Foundry (Foundry IQ)
@@ -64,13 +64,16 @@ index.html (GitHub Pages)
 
 ## Categories
 
-| Category | Search Keywords |
-|---|---|
-| AI Tools | ai agent, LLM, chatbot, RAG, fine-tuning |
-| Dev Tools | CLI, vscode extension, devtools, terminal tool, code generator |
-| Data & Analytics | analytics, data visualization, dashboard, pandas, jupyter |
-| Security | cybersecurity, vulnerability, authentication, penetration testing, encryption |
-| Design & Creative | design system, figma plugin, animation, generative art, UI components |
+Each category is tuned independently — fast-moving fields use a short window to stay fresh, while mature fields use a longer window and higher star threshold to surface established quality projects.
+
+| Category | Search Window | Min Stars | Search Keywords |
+|---|---|---|---|
+| AI Tools | 90 days | 10 | ai agent, LLM, chatbot, RAG, fine-tuning |
+| Dev Tools | 180 days | 10 | CLI, vscode extension, devtools, terminal tool, code generator |
+| Data & Analytics | 180 days | 10 | analytics, data visualization, dashboard, pandas, jupyter |
+| Security | 365 days | 50 | cybersecurity, vulnerability, authentication, penetration testing, encryption |
+| Design & Creative | 180 days | 10 | design system, figma plugin, animation, generative art, UI components |
+| Web3 / Blockchain | 365 days | 100 | blockchain, smart contract, web3, solidity, ethereum, defi, NFT, dapp |
 
 ## Language Filter
 
@@ -81,6 +84,7 @@ Repos are also filterable by programming language:
 | JavaScript / TypeScript | JavaScript, TypeScript, CoffeeScript, Vue |
 | Python | Python |
 | HTML / CSS | HTML, CSS, SCSS, Sass |
+| C / C++ | C, C++ |
 | Others | Go, Rust, Java, Shell, and all others |
 
 ## Setup
