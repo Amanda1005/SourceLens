@@ -1,6 +1,6 @@
 """
-fetch_repos.py — Search GitHub for repos from the past 24 hours and merge into
-a rolling 7-day window. Older entries are pruned automatically.
+fetch_repos.py — Search GitHub for repos from the past 30 days (by language)
+and merge into a rolling 30-day window. Older entries are pruned automatically.
 """
 
 import json
@@ -11,83 +11,77 @@ from pathlib import Path
 
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
-MAX_PER_CATEGORY = 3  # max new repos per category per day (5 cats × 3 = 15 max)
-KEEP_DAYS        = 7  # rolling window size
+MAX_PER_CATEGORY = 5   # max new repos per language category per run
+KEEP_DAYS        = 30  # rolling window size
 
-SEARCH_QUERIES = {
-    "AI Tools": [
-        "ai agent",
-        "LLM",
-        "GPT",
-    ],
-    "Dev Tools": [
-        "developer tool",
-        "cli tool",
-        "devtools",
-    ],
-    "Data & Analytics": [
-        "data dashboard",
-        "data visualization",
-    ],
-    "Security": [
-        "security tool",
-        "encryption",
-    ],
-    "Design & Creative": [
-        "generative art",
-        "UI design",
-    ],
+# Each list entry is a GitHub language keyword for the search API
+LANGUAGE_CATEGORIES: dict[str, list[str]] = {
+    "JavaScript": ["javascript", "typescript"],
+    "Python":     ["python"],
+    "HTML":       ["html"],
+    "Others":     ["go", "rust", "java", "shell"],
 }
 
 GITHUB_SEARCH_URL = "https://api.github.com/search/repositories"
 HEADERS = {"Accept": "application/vnd.github+json"}
 
 
-def search_repos(query: str, date_since: str) -> list[dict]:
+def get_language_category(language: str) -> str:
+    lang = (language or "").lower()
+    if lang in ("javascript", "typescript", "coffeescript", "vue"):
+        return "JavaScript"
+    if lang == "python":
+        return "Python"
+    if lang in ("html", "css", "scss", "sass"):
+        return "HTML"
+    return "Others"
+
+
+def search_repos(language_keyword: str, date_since: str) -> list[dict]:
     params = {
-        "q": f"{query} created:>{date_since} stars:>1",
+        "q": f"language:{language_keyword} created:>{date_since} stars:>2",
         "sort": "stars",
         "order": "desc",
-        "per_page": 5,
+        "per_page": 10,
     }
     try:
         resp = requests.get(GITHUB_SEARCH_URL, headers=HEADERS, params=params, timeout=15)
         resp.raise_for_status()
         return resp.json().get("items", [])
     except requests.RequestException as e:
-        print(f"  [warn] GitHub API error for '{query}': {e}")
+        print(f"  [warn] GitHub API error for 'language:{language_keyword}': {e}")
         return []
 
 
-def extract_fields(item: dict, category_hint: str) -> dict:
+def extract_fields(item: dict, category: str) -> dict:
     return {
-        "name":          item.get("name", ""),
-        "full_name":     item.get("full_name", ""),
-        "description":   item.get("description") or "",
-        "url":           item.get("html_url", ""),
-        "stars":         item.get("stargazers_count", 0),
-        "language":      item.get("language") or "",
-        "topics":        item.get("topics", []),
-        "created_at":    item.get("created_at", ""),
-        "category_hint": category_hint,
+        "name":        item.get("name", ""),
+        "full_name":   item.get("full_name", ""),
+        "description": item.get("description") or "",
+        "url":         item.get("html_url", ""),
+        "stars":       item.get("stargazers_count", 0),
+        "language":    item.get("language") or "",
+        "topics":      item.get("topics", []),
+        "created_at":  item.get("created_at", ""),
+        "category":    category,
     }
 
 
 def fetch_new_repos() -> list[dict]:
-    since = datetime.now(timezone.utc) - timedelta(days=7)
+    since = datetime.now(timezone.utc) - timedelta(days=30)
     date_since = since.strftime("%Y-%m-%d")
-    print(f"Fetching repos created after {date_since} (last 7 days, stars > 1) …")
+    print(f"Fetching repos created after {date_since} (last 30 days, stars > 2) …")
 
     seen: set[str] = set()
     results: list[dict] = []
 
-    for category, queries in SEARCH_QUERIES.items():
+    for category, lang_keywords in LANGUAGE_CATEGORIES.items():
         cat_count = 0
-        for query in queries:
+        for lang_keyword in lang_keywords:
             if cat_count >= MAX_PER_CATEGORY:
                 break
-            print(f"  [{category}] {query!r}")
-            items = search_repos(query, date_since)
+            print(f"  [{category}] language:{lang_keyword}")
+            items = search_repos(lang_keyword, date_since)
             for item in items:
                 if cat_count >= MAX_PER_CATEGORY:
                     break
@@ -98,7 +92,7 @@ def fetch_new_repos() -> list[dict]:
                     cat_count += 1
             time.sleep(1)
 
-    print(f"Found {len(results)} new repos today.")
+    print(f"Found {len(results)} new repos.")
     return results
 
 
@@ -112,14 +106,13 @@ def prune_old(repos: list[dict]) -> list[dict]:
             if created >= cutoff:
                 kept.append(r)
         except Exception:
-            kept.append(r)  # keep if date can't be parsed
+            kept.append(r)
     return kept
 
 
 def main():
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    # Load existing rolling data
     existing: list[dict] = []
     if OUTPUT_PATH.exists():
         try:
@@ -128,7 +121,12 @@ def main():
         except Exception:
             existing = []
 
-    # Fetch today's new repos
+    # Re-categorize existing repos by language (migration for old category names)
+    for repo in existing:
+        old_cat = repo.get("category", "")
+        if old_cat not in LANGUAGE_CATEGORIES:
+            repo["category"] = get_language_category(repo.get("language", ""))
+
     new_repos = fetch_new_repos()
 
     # Merge: new repos first, then existing (skip duplicates)
@@ -139,9 +137,7 @@ def main():
             merged.append(repo)
             existing_names.add(repo["full_name"])
 
-    # Prune repos outside the 7-day window
     merged = prune_old(merged)
-
     print(f"Rolling window total: {len(merged)} repos (after pruning).")
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:

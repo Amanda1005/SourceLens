@@ -163,7 +163,7 @@
       position: relative;
       transform-style: preserve-3d;
       will-change: transform;
-      animation: cardEntrance 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation: cardEntrance 1.0s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
     .card::after {
       content: '';
@@ -193,11 +193,10 @@
       width: 100%;
       flex-shrink: 0;
     }
-    .bar-AI\ Tools      { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
-    .bar-Dev\ Tools     { background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
-    .bar-Data\ \&\ Analytics { background: linear-gradient(90deg, #10b981, #34d399); }
-    .bar-Security       { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
-    .bar-Design\ \&\ Creative { background: linear-gradient(90deg, #ec4899, #f472b6); }
+    .bar-JavaScript { background: linear-gradient(90deg, #b38600, #f1e05a); }
+    .bar-Python     { background: linear-gradient(90deg, #1a4f8a, #4a90d9); }
+    .bar-HTML       { background: linear-gradient(90deg, #b02800, #e34c26); }
+    .bar-Others     { background: linear-gradient(90deg, #6d28d9, #a78bfa); }
 
     .card-body {
       padding: 18px 20px 16px;
@@ -232,11 +231,10 @@
       white-space: nowrap;
       flex-shrink: 0;
     }
-    .badge-AI\ Tools      { background: #7c3aed22; color: #a78bfa; border: 1px solid #7c3aed55; }
-    .badge-Dev\ Tools     { background: #0ea5e922; color: #38bdf8; border: 1px solid #0ea5e955; }
-    .badge-Data\ \&\ Analytics { background: #10b98122; color: #34d399; border: 1px solid #10b98155; }
-    .badge-Security       { background: #f59e0b22; color: #fbbf24; border: 1px solid #f59e0b55; }
-    .badge-Design\ \&\ Creative { background: #ec489922; color: #f472b6; border: 1px solid #ec489955; }
+    .badge-JavaScript { background: rgba(241,224,90,0.18);  color: #8a6800; border: 1px solid rgba(241,224,90,0.5); }
+    .badge-Python     { background: rgba(74,144,217,0.14);  color: #1a4f8a; border: 1px solid rgba(74,144,217,0.4); }
+    .badge-HTML       { background: rgba(227,76,38,0.12);   color: #b02800; border: 1px solid rgba(227,76,38,0.35); }
+    .badge-Others     { background: rgba(167,139,250,0.14); color: #6d28d9; border: 1px solid rgba(167,139,250,0.4); }
 
     /* descriptions — zh primary, en secondary */
     .desc-zh {
@@ -338,7 +336,7 @@
       <span class="brand-icon">🔭</span>
       <div>
         <h1>SourceLens</h1>
-        <p>Daily open-source discovery · 7-day rolling window · AI-classified by Microsoft Phi-4</p>
+        <p>New GitHub repos by language · 30-day rolling window · Auto-updated daily</p>
       </div>
     </div>
     <span id="last-updated">Loading…</span>
@@ -348,11 +346,10 @@
 <nav>
   <div class="tabs" id="tabs">
     <button class="tab active" data-cat="All">All</button>
-    <button class="tab" data-cat="AI Tools">AI Tools</button>
-    <button class="tab" data-cat="Dev Tools">Dev Tools</button>
-    <button class="tab" data-cat="Data & Analytics">Data & Analytics</button>
-    <button class="tab" data-cat="Security">Security</button>
-    <button class="tab" data-cat="Design & Creative">Design & Creative</button>
+    <button class="tab" data-cat="JavaScript">JavaScript</button>
+    <button class="tab" data-cat="Python">Python</button>
+    <button class="tab" data-cat="HTML">HTML</button>
+    <button class="tab" data-cat="Others">Others</button>
   </div>
 </nav>
 
@@ -379,12 +376,11 @@
   };
 
   const CAT_LABEL = {
-    "All":               "All",
-    "AI Tools":          "AI Tools",
-    "Dev Tools":         "Dev Tools",
-    "Data & Analytics":  "Data & Analytics",
-    "Security":          "Security",
-    "Design & Creative": "Design & Creative",
+    "All":        "All",
+    "JavaScript": "JavaScript",
+    "Python":     "Python",
+    "HTML":       "HTML",
+    "Others":     "Others",
   };
 
   let allRepos = [];
@@ -456,7 +452,7 @@
 
     const card = document.createElement("article");
     card.className = "card";
-    card.style.animationDelay = `${Math.min(index * 0.07, 0.56)}s`;
+    card.style.animationDelay = `${Math.min(index * 0.12, 0.96)}s`;
     card.innerHTML = `
       <div class="card-shine"></div>
       <div class="card-bar bar-${escHtml(category)}"></div>
@@ -507,7 +503,7 @@
     msg.style.display = "none";
     const catLabel = activeCategory === "All" ? "" : ` in "${CAT_LABEL[activeCategory]}"`;
     stats.textContent =
-      `${filtered.length} repos found${catLabel} · ${allRepos.length} total (7-day rolling)`;
+      `${filtered.length} repos found${catLabel} · ${allRepos.length} total (30-day rolling)`;
 
     const frag = document.createDocumentFragment();
     filtered.forEach((r, i) => frag.appendChild(buildCard(r, i)));
