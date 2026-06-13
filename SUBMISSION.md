@@ -68,32 +68,51 @@ index.html (GitHub Pages)
 
 ## 3-Minute Demo Video Script
 
-**[0:00 – 0:20] Hook**
-"Every day, thousands of new open-source projects appear on GitHub. Most developers never see them. SourceLens fixes that — automatically, using Microsoft AI."
+> Narration (in plain text) is what the AI voice reads.
+> [Screen directions] in brackets are for the recorder only — not spoken.
 
-**[0:20 – 1:10] Show the live website**
-- Open `amanda1005.github.io/SourceLens`
-- Show the glassmorphism UI and animated background
-- Click through Category tabs: AI Tools, Dev Tools, Security, Web3 / Blockchain
-- Click Language tabs: JavaScript / TypeScript, Python
-- Hover a card — show the 3D tilt effect
-- Click "View on GitHub" on a repo
-- Point to the stats bar: "AI-curated projects, updated daily"
+---
 
-**[1:10 – 2:00] Show the automation**
-- Open GitHub repository → Actions tab
-- Show the daily workflow run history
-- Click a recent run, walk through the steps:
-  "Fetch repos from GitHub" → "Classify with Phi-4 via Azure AI Foundry" → "Commit and push"
-- "This pipeline runs every day at midnight UTC. No human clicks required."
+**[0:00 – 0:20]**
+[Screen: SourceLens homepage loading]
 
-**[2:00 – 2:40] Show the code**
-- Open `fetch_repos.py` → "Six categories, each with its own search window and star threshold — AI Tools searches the last 90 days, Web3 searches a full year with 100+ stars"
-- Open `classify.py` → "Each repo is sent to Microsoft Phi-4-mini-instruct via Azure AI Foundry. It returns a category and bilingual descriptions in one call."
-- Open `daily.yml` → "One workflow file. GitHub handles the schedule, the secrets, and the deployment."
+Every day, thousands of new open-source projects appear on GitHub. Most developers never find them — buried under noise, algorithm feeds, and simply too much to keep track of. SourceLens fixes that. Automatically.
 
-**[2:40 – 3:00] Closing**
-"SourceLens is fully open source. It is a real agentic pipeline powered by Microsoft Azure AI Foundry — discovering, classifying, and presenting new open-source projects every single day, automatically."
+---
+
+**[0:20 – 1:15]**
+[Screen: Browse the website — click category tabs, then language tabs, hover a card, click View on GitHub]
+
+This is SourceLens — a daily open-source discovery engine, powered by Microsoft AI. Every repository you see here was discovered, classified, and described by an automated pipeline. No human curation required.
+
+You can filter by topic: AI Tools, Dev Tools, Security, Web3 and Blockchain, and more. Or filter by programming language — JavaScript, Python, C and C-plus-plus. Both filters work at the same time, so you can narrow down to exactly what you are looking for.
+
+Hover over any card to see the three-dimensional tilt effect. Each card shows the repository name, an AI-generated description in both English and Chinese, the programming language, and a direct link to GitHub.
+
+---
+
+**[1:15 – 1:55]**
+[Screen: GitHub → Actions tab → click a recent workflow run]
+
+Behind the website is a fully automated pipeline. Every day at midnight UTC, a GitHub Actions workflow runs on its own. It searches GitHub for new repositories, sends them to Microsoft Phi-4 via Azure AI Foundry for classification, and commits the results back to the repository. GitHub Pages serves the updated site instantly.
+
+No servers. No databases. No manual work.
+
+---
+
+**[1:55 – 2:40]**
+[Screen: fetch_repos.py → scroll to CATEGORY_CONFIG, then classify.py → scroll to build_user_prompt]
+
+What makes SourceLens different is its per-category intelligence. AI Tools — the fastest-moving space — searches the last 90 days. Web3 and Blockchain, a more mature ecosystem, searches the past year and requires at least 100 stars. Each category is tuned to surface what actually matters in that field.
+
+The AI layer uses Microsoft Phi-4-mini-instruct via Azure AI Foundry. For each repository, the model returns a topic category and bilingual descriptions — one in English, one in Traditional Chinese — grounded entirely in the actual repository metadata.
+
+---
+
+**[2:40 – 3:00]**
+[Screen: Back to SourceLens homepage]
+
+SourceLens is fully open source, built on GitHub, and powered by Microsoft Azure AI Foundry. It discovers, classifies, and publishes new open-source projects every single day — entirely on its own.
 
 ---
 
