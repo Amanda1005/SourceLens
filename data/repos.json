@@ -2242,8 +2242,8 @@
     "created_at": "2026-06-09T11:05:36Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "",
-    "desc_zh": ""
+    "desc_en": "Google's model for Python-based AI research and development.",
+    "desc_zh": "谷歌的PythonAI研究开发模型"
   },
   {
     "name": "architect-loop",
@@ -2305,7 +2305,7 @@
     "created_at": "2026-06-08T01:37:06Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "",
-    "desc_zh": ""
+    "desc_en": "Python class for GPT-OCR integration with Email parsing",
+    "desc_zh": "GPT-ОЦП与邮件解析脚本"
   }
 ]
