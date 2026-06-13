@@ -40,6 +40,20 @@
     "desc_zh": "Open every project in its own "
   },
   {
+    "name": "MedExamAgent-v1.0",
+    "full_name": "Aisling-Huang/MedExamAgent-v1.0",
+    "description": "医学考试AI复习工具，自动提炼PPT和教材用的高频考点，生成各类题型及临床素养拓展。",
+    "url": "https://github.com/Aisling-Huang/MedExamAgent-v1.0",
+    "stars": 2,
+    "language": "HTML",
+    "topics": [],
+    "created_at": "2026-06-13T03:56:37Z",
+    "category_hint": "AI Tools",
+    "category": "AI Tools",
+    "desc_en": "医学考试AI复习工具，自动提炼PPT和教材用的高频考点，生成各类题型及临床素养拓展。",
+    "desc_zh": "医学考试AI复习工具，自动提炼PPT和教材用的高频考点，生成"
+  },
+  {
     "name": "viral-reel-maker",
     "full_name": "DennisWei9898/viral-reel-maker",
     "description": "Turn a long video into branded 9:16 viral reels. Style-driven AI agent: interview → learn from a reference → auto-produce.",
