@@ -11,35 +11,30 @@ from pathlib import Path
 
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "repos.json"
 
-# Search queries mapped to a category hint for downstream classification
+MAX_REPOS = 40  # hard cap to keep classify.py fast
+
 SEARCH_QUERIES = {
     "AI Tools": [
         "ai agent",
         "LLM",
-        "claude",
         "GPT",
-        "diffusion model",
     ],
     "Dev Tools": [
         "developer tool",
         "cli tool",
-        "vscode extension",
         "devtools",
     ],
     "Data & Analytics": [
         "data dashboard",
         "data visualization",
-        "analytics",
     ],
     "Security": [
         "security tool",
-        "privacy",
         "encryption",
     ],
     "Design & Creative": [
         "generative art",
         "UI design",
-        "creative coding",
     ],
 }
 
@@ -48,18 +43,16 @@ HEADERS = {"Accept": "application/vnd.github+json"}
 
 
 def build_date_filter() -> str:
-    """Return a GitHub date qualifier for the last 24 hours."""
     since = datetime.now(timezone.utc) - timedelta(days=7)
     return since.strftime("%Y-%m-%d")
 
 
 def search_repos(query: str, date_since: str) -> list[dict]:
-    """Fetch one page of repos matching the query, created in the last 24 h with stars > 20."""
     params = {
         "q": f"{query} created:>{date_since} stars:>1",
         "sort": "stars",
         "order": "desc",
-        "per_page": 30,
+        "per_page": 5,  # only top 5 per query
     }
     try:
         resp = requests.get(GITHUB_SEARCH_URL, headers=HEADERS, params=params, timeout=15)
@@ -71,7 +64,6 @@ def search_repos(query: str, date_since: str) -> list[dict]:
 
 
 def extract_fields(item: dict, category_hint: str) -> dict:
-    """Pull only the fields we care about from a raw GitHub API item."""
     return {
         "name": item.get("name", ""),
         "full_name": item.get("full_name", ""),
@@ -87,13 +79,15 @@ def extract_fields(item: dict, category_hint: str) -> dict:
 
 def fetch_all_repos() -> list[dict]:
     date_since = build_date_filter()
-    print(f"Searching repos created after {date_since} with stars > 20 …")
+    print(f"Searching repos created after {date_since} with stars > 1 …")
 
     seen: set[str] = set()
     results: list[dict] = []
 
     for category, queries in SEARCH_QUERIES.items():
         for query in queries:
+            if len(results) >= MAX_REPOS:
+                break
             print(f"  [{category}] query: {query!r}")
             items = search_repos(query, date_since)
             for item in items:
@@ -101,7 +95,7 @@ def fetch_all_repos() -> list[dict]:
                 if full_name and full_name not in seen:
                     seen.add(full_name)
                     results.append(extract_fields(item, category))
-            time.sleep(1)  # respect GitHub rate limit
+            time.sleep(1)
 
     print(f"Found {len(results)} unique repos.")
     return results
@@ -110,6 +104,9 @@ def fetch_all_repos() -> list[dict]:
 def main():
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     repos = fetch_all_repos()
+    if not repos:
+        print("No repos found — keeping existing data.")
+        return
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(repos, f, ensure_ascii=False, indent=2)
     print(f"Saved to {OUTPUT_PATH}")
