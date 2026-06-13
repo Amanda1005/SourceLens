@@ -107,8 +107,9 @@ def main():
         credential=AzureKeyCredential(api_key),
     )
 
-    unclassified = [r for r in repos if not r.get("desc_zh")]
-    print(f"Classifying {len(unclassified)}/{len(repos)} repos with {MODEL_NAME} ...")
+    MAX_PER_RUN = 20
+    unclassified = [r for r in repos if not r.get("desc_zh")][:MAX_PER_RUN]
+    print(f"Classifying {len(unclassified)}/{len(repos)} repos with {MODEL_NAME} (max {MAX_PER_RUN} per run) ...")
 
     for i, repo in enumerate(unclassified, 1):
         print(f"  [{i}/{len(unclassified)}] {repo['full_name']}")
