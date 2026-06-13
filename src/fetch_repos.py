@@ -74,9 +74,9 @@ def extract_fields(item: dict, category_hint: str) -> dict:
 
 
 def fetch_new_repos() -> list[dict]:
-    since = datetime.now(timezone.utc) - timedelta(hours=24)
+    since = datetime.now(timezone.utc) - timedelta(days=7)
     date_since = since.strftime("%Y-%m-%d")
-    print(f"Fetching repos created after {date_since} (last 24h, stars > 1) …")
+    print(f"Fetching repos created after {date_since} (last 7 days, stars > 1) …")
 
     seen: set[str] = set()
     results: list[dict] = []
