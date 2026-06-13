@@ -49,14 +49,14 @@ HEADERS = {"Accept": "application/vnd.github+json"}
 
 def build_date_filter() -> str:
     """Return a GitHub date qualifier for the last 24 hours."""
-    since = datetime.now(timezone.utc) - timedelta(days=3)
+    since = datetime.now(timezone.utc) - timedelta(days=7)
     return since.strftime("%Y-%m-%d")
 
 
 def search_repos(query: str, date_since: str) -> list[dict]:
     """Fetch one page of repos matching the query, created in the last 24 h with stars > 20."""
     params = {
-        "q": f"{query} created:>{date_since} stars:>5",
+        "q": f"{query} created:>{date_since} stars:>1",
         "sort": "stars",
         "order": "desc",
         "per_page": 30,
