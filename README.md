@@ -47,7 +47,7 @@ fetch_repos.py
          v
 classify.py  <--- Microsoft Azure AI Foundry (Foundry IQ)
    - Sends each new repo to Phi-4-mini-instruct
-   - Returns: category + English description + Chinese description
+   - Returns: category + AI-generated description
    - Saves incrementally after each repo (crash-safe)
    - AZURE_AI_KEY stored in GitHub Secrets only
          |
@@ -57,7 +57,6 @@ data/repos.json  (committed back by Actions bot)
          v
 index.html (GitHub Pages)
    - Glassmorphism UI with animated background
-   - 3D card tilt on hover, entrance animation
    - Dual filter: topic category tabs + language tabs
    - safeUrl() XSS protection on all external links
 ```
@@ -128,7 +127,7 @@ The GitHub Actions workflow runs automatically every day at UTC 00:00.
 This project integrates **Foundry IQ** (Azure AI Foundry) as the intelligence layer:
 
 - Phi-4-mini-instruct classifies each repository into the correct topic category
-- Generates bilingual (English + Traditional Chinese) descriptions grounded in actual repo metadata
+- Generates concise descriptions grounded in actual repo metadata
 - Runs as part of a fully automated agentic pipeline via GitHub Actions
 - API key is stored exclusively in GitHub Secrets — never in source code
 
