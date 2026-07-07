@@ -4,7 +4,7 @@
     "full_name": "DietrichGebert/ponytail",
     "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
     "url": "https://github.com/DietrichGebert/ponytail",
-    "stars": 74955,
+    "stars": 76006,
     "language": "JavaScript",
     "topics": [
       "agent-skills",
@@ -21,15 +21,15 @@
     "created_at": "2026-06-12T00:52:37Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "A JavaScript tool for lazy senior dev AI agents.",
-    "desc_zh": "懒惰的高级开发者AI工具"
+    "desc_en": "Agent-tool for lazy-effort code generation like the laziest dev.",
+    "desc_zh": "懒代码生成器"
   },
   {
     "name": "DeepSeek-Reasonix",
     "full_name": "esengine/DeepSeek-Reasonix",
     "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
     "url": "https://github.com/esengine/DeepSeek-Reasonix",
-    "stars": 26049,
+    "stars": 26223,
     "language": "Go",
     "topics": [
       "agent",
@@ -52,15 +52,15 @@
     "created_at": "2026-04-21T08:27:02Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "A native AI coding agent to assist developers from the command line.",
-    "desc_zh": "名神精英编程助手"
+    "desc_en": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave ",
+    "desc_zh": "DeepSeek-native AI coding agen"
   },
   {
     "name": "guizang-ppt-skill",
     "full_name": "op7418/guizang-ppt-skill",
     "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
     "url": "https://github.com/op7418/guizang-ppt-skill",
-    "stars": 20220,
+    "stars": 20359,
     "language": "HTML",
     "topics": [
       "ai-agent",
@@ -77,16 +77,16 @@
     ],
     "created_at": "2026-04-23T13:23:07Z",
     "category_hint": "AI Tools",
-    "category": "AI Tools",
-    "desc_en": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image",
-    "desc_zh": "AI-agent Skill for generating "
+    "category": "Design & Creative",
+    "desc_en": "An AI-based skill for creating polished HTML slide decks.",
+    "desc_zh": "设计工具"
   },
   {
     "name": "obscura",
     "full_name": "h4ckf0r0day/obscura",
     "description": "The headless browser for AI agents and web scraping",
     "url": "https://github.com/h4ckf0r0day/obscura",
-    "stars": 17700,
+    "stars": 17785,
     "language": "Rust",
     "topics": [
       "antidetect",
@@ -102,15 +102,15 @@
     "created_at": "2026-04-13T10:31:41Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "Headless browser for AI agents and advanced web scraping.",
-    "desc_zh": "人工智能代理辅助浏览器。"
+    "desc_en": "Headless browser for AI agents and web scraping in Rust.",
+    "desc_zh": "人工智能代理模式浏览器"
   },
   {
     "name": "MiMo-Code",
     "full_name": "XiaomiMiMo/MiMo-Code",
     "description": "MiMo Code: Where Models and Agents Co-Evolve",
     "url": "https://github.com/XiaomiMiMo/MiMo-Code",
-    "stars": 11482,
+    "stars": 11545,
     "language": "TypeScript",
     "topics": [
       "ai",
@@ -122,15 +122,15 @@
     "created_at": "2026-06-10T11:52:41Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "A TypeScript project focusing on evolving AI models and agents.",
-    "desc_zh": "用 TypeScript 進行 AI 模型與代理一起演化"
+    "desc_en": "A platform for evolving AI models and agents in TypeScript.",
+    "desc_zh": "模型和代理一起演化平台"
   },
   {
     "name": "graphify",
     "full_name": "Graphify-Labs/graphify",
     "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
     "url": "https://github.com/Graphify-Labs/graphify",
-    "stars": 78197,
+    "stars": 78788,
     "language": "Python",
     "topics": [
       "antigravity",
@@ -147,16 +147,16 @@
     ],
     "created_at": "2026-04-03T15:49:07Z",
     "category_hint": "Dev Tools",
-    "category": "AI Tools",
-    "desc_en": "Graphify is a Python tool that turns code and its related files into a searchable knowledge graph.",
-    "desc_zh": "グラフィー. 因式编码，知识图谱."
+    "category": "Dev Tools",
+    "desc_en": "AI coding assistant transforms code and documents into queryable knowledge.",
+    "desc_zh": "人工智能编程助手解码代码文档"
   },
   {
     "name": "open-design",
     "full_name": "nexu-io/open-design",
-    "description": "🎨 The Vibe Design Workspace & the open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / Gemini / OpenCode / Qwen & 20+ CLIs via BYOK.",
+    "description": "🎨 The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / Gemini / OpenCode / Qwen & 20+ CLIs via BYOK.",
     "url": "https://github.com/nexu-io/open-design",
-    "stars": 75248,
+    "stars": 75635,
     "language": "TypeScript",
     "topics": [
       "agent-skills",
@@ -183,15 +183,15 @@
     "created_at": "2026-04-28T04:25:20Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "The Vibe Design Workspace is a versatile local-first desktop application for creative design.",
-    "desc_zh": "開源設計工具套壓"
+    "desc_en": "Open-source Claude Design alternative with a focus on coding and design assets.",
+    "desc_zh": "開源開視創意工具集"
   },
   {
     "name": "Understand-Anything",
     "full_name": "Egonex-AI/Understand-Anything",
     "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
     "url": "https://github.com/Egonex-AI/Understand-Anything",
-    "stars": 71072,
+    "stars": 71427,
     "language": "TypeScript",
     "topics": [
       "antigravity-skills",
@@ -215,15 +215,15 @@
     "created_at": "2026-03-15T02:30:51Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "Transform code into interactive, explorable knowledge graphs for better understanding.",
-    "desc_zh": "转化代码成可爱知识图，可探索学习"
+    "desc_en": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can e",
+    "desc_zh": "Graphs that teach > graphs tha"
   },
   {
     "name": "rtk",
     "full_name": "rtk-ai/rtk",
     "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
     "url": "https://github.com/rtk-ai/rtk",
-    "stars": 68715,
+    "stars": 69000,
     "language": "Rust",
     "topics": [
       "agentic-coding",
@@ -246,13 +246,15 @@
   {
     "name": "career-ops",
     "full_name": "santifer/career-ops",
-    "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
+    "description": "Open-source AI job search: scan job portals, score listings A-F, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Gemini, Codex, OpenCode…)",
     "url": "https://github.com/santifer/career-ops",
-    "stars": 58691,
+    "stars": 58873,
     "language": "JavaScript",
     "topics": [
+      "ai",
       "ai-agent",
       "anthropic",
+      "ats",
       "automation",
       "beginner-friendly",
       "career",
@@ -264,6 +266,8 @@
       "golang",
       "good-first-issue",
       "interview-prep",
+      "job-application",
+      "job-hunting",
       "job-search",
       "open-source",
       "resume"
@@ -276,7 +280,7 @@
     "full_name": "coreyhaines31/marketingskills",
     "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
     "url": "https://github.com/coreyhaines31/marketingskills",
-    "stars": 36487,
+    "stars": 36856,
     "language": "JavaScript",
     "topics": [
       "claude",
@@ -291,7 +295,7 @@
     "full_name": "EKKOLearnAI/hermes-studio",
     "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics ",
     "url": "https://github.com/EKKOLearnAI/hermes-studio",
-    "stars": 8845,
+    "stars": 8887,
     "language": "TypeScript",
     "topics": [
       "agent",
@@ -317,7 +321,7 @@
     "full_name": "rorkai/App-Store-Connect-CLI",
     "description": "Fast, scriptable CLI for the App Store Connect API. Automate TestFlight, builds, submissions, signing, analytics, screenshots, subscriptions, and more. JSON-first, no interactive prompts",
     "url": "https://github.com/rorkai/App-Store-Connect-CLI",
-    "stars": 4981,
+    "stars": 4987,
     "language": "Go",
     "topics": [
       "app-store-connect",
@@ -344,7 +348,7 @@
     "full_name": "kenn-io/agentsview",
     "description": "Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. ",
     "url": "https://github.com/kenn-io/agentsview",
-    "stars": 3761,
+    "stars": 4001,
     "language": "Go",
     "topics": [],
     "created_at": "2026-02-19T19:33:24Z",
@@ -355,7 +359,7 @@
     "full_name": "repowise-dev/repowise",
     "description": "Codebase intelligence for AI and humans: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.",
     "url": "https://github.com/repowise-dev/repowise",
-    "stars": 3118,
+    "stars": 3216,
     "language": "Python",
     "topics": [
       "ai",
@@ -382,7 +386,7 @@
     "full_name": "usestrix/strix",
     "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
     "url": "https://github.com/usestrix/strix",
-    "stars": 37224,
+    "stars": 38043,
     "language": "Python",
     "topics": [
       "agents",
@@ -414,7 +418,7 @@
     "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
     "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
-    "stars": 24642,
+    "stars": 24784,
     "language": "Python",
     "topics": [
       "ai-agents",
@@ -446,7 +450,7 @@
     "full_name": "0x4m4/hexstrike-ai",
     "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
     "url": "https://github.com/0x4m4/hexstrike-ai",
-    "stars": 10162,
+    "stars": 10182,
     "language": "Python",
     "topics": [
       "0x4m4",
@@ -478,7 +482,7 @@
     "full_name": "InterceptSuite/ProxyBridge",
     "description": "Proxifier Alternative to redirect any Windows/MacOS/Linux TCP and UDP traffic to HTTP/Socks5 proxy",
     "url": "https://github.com/InterceptSuite/ProxyBridge",
-    "stars": 5314,
+    "stars": 5328,
     "language": "C",
     "topics": [
       "c",
@@ -507,7 +511,7 @@
     "full_name": "CarterPerez-dev/Cybersecurity-Projects",
     "description": "Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Gamified Cybersecurity learning 👇",
     "url": "https://github.com/CarterPerez-dev/Cybersecurity-Projects",
-    "stars": 3808,
+    "stars": 3840,
     "language": "Python",
     "topics": [
       "ai",
@@ -539,7 +543,7 @@
     "full_name": "VoltAgent/awesome-design-md",
     "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
     "url": "https://github.com/VoltAgent/awesome-design-md",
-    "stars": 95943,
+    "stars": 96256,
     "language": "",
     "topics": [
       "awesome-list",
@@ -561,10 +565,21 @@
     "full_name": "google-labs-code/design.md",
     "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
     "url": "https://github.com/google-labs-code/design.md",
-    "stars": 25032,
+    "stars": 25184,
     "language": "TypeScript",
     "topics": [],
     "created_at": "2026-04-10T17:54:59Z",
+    "category_hint": "Design & Creative"
+  },
+  {
+    "name": "astryx",
+    "full_name": "facebook/astryx",
+    "description": "An open source design system that's fully customizable and agent ready",
+    "url": "https://github.com/facebook/astryx",
+    "stars": 6497,
+    "language": "TypeScript",
+    "topics": [],
+    "created_at": "2026-01-09T16:20:32Z",
     "category_hint": "Design & Creative"
   },
   {
@@ -572,7 +587,7 @@
     "full_name": "cobusgreyling/loop-engineering",
     "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
     "url": "https://github.com/cobusgreyling/loop-engineering",
-    "stars": 5968,
+    "stars": 6217,
     "language": "JavaScript",
     "topics": [
       "agentic-ai",
@@ -597,22 +612,11 @@
     "category_hint": "Design & Creative"
   },
   {
-    "name": "astryx",
-    "full_name": "facebook/astryx",
-    "description": "An open source design system that's fully customizable and agent ready",
-    "url": "https://github.com/facebook/astryx",
-    "stars": 5952,
-    "language": "TypeScript",
-    "topics": [],
-    "created_at": "2026-01-09T16:20:32Z",
-    "category_hint": "Design & Creative"
-  },
-  {
     "name": "fallow",
     "full_name": "fallow-rs/fallow",
     "description": "Codebase intelligence for TypeScript and JavaScript. Free static analysis of code and styles: unused code, duplication, circular deps, complexity hotspots, architecture boundaries, design-system drift. Optional paid runtime layer (Fallow Runtime): hot-path review and cold-path deletion evidence from real production traffic.",
     "url": "https://github.com/fallow-rs/fallow",
-    "stars": 4015,
+    "stars": 4029,
     "language": "Rust",
     "topics": [
       "cli",
@@ -642,7 +646,7 @@
     "full_name": "unicity-sphere/sphere-sdk",
     "description": "The SDK for autonomous economic agents. Give an agent an identity, a wallet, and the ability to find, negotiate with, and settle with other agents - peer-to-peer, with perfect privacy and ultra-fast finality",
     "url": "https://github.com/unicity-sphere/sphere-sdk",
-    "stars": 5428,
+    "stars": 5424,
     "language": "TypeScript",
     "topics": [
       "ai-agents",
@@ -658,7 +662,7 @@
     "full_name": "ZhangJinHaHaHa/AgentLens",
     "description": "Agentlens is a trusted agent trading platform.  Here, you can quickly find the Agent that meets your needs, and you can also publish your own Agent to turn it into your digital asset.  We encourage everyone to transform their areas of expertise into Agents and turn them into digital assets, allowing others to see your unique strengths.",
     "url": "https://github.com/ZhangJinHaHaHa/AgentLens",
-    "stars": 919,
+    "stars": 934,
     "language": "TypeScript",
     "topics": [
       "agentic-ai",
@@ -721,7 +725,7 @@
     "full_name": "swapperfinance/swapper-toolkit",
     "description": "DeFi toolkit for AI agents and coding assistants — deposit funds, execute trades, and manage crypto wallets. Works with Claude Code, Cursor,   Windsurf, OpenClaw, CrewAI, AutoGPT, and other AI agent frameworks.",
     "url": "https://github.com/swapperfinance/swapper-toolkit",
-    "stars": 822,
+    "stars": 823,
     "language": "",
     "topics": [
       "ai-agent",
