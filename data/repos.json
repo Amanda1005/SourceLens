@@ -4,7 +4,7 @@
     "full_name": "DietrichGebert/ponytail",
     "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
     "url": "https://github.com/DietrichGebert/ponytail",
-    "stars": 86126,
+    "stars": 86665,
     "language": "JavaScript",
     "topics": [
       "agent-skills",
@@ -21,15 +21,15 @@
     "created_at": "2026-06-12T00:52:37Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "Tools to 'poke at' AI like a lazy senior dev, maximizing unused code potential.",
-    "desc_zh": "AI 整理助 助他手 longues"
+    "desc_en": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you nev",
+    "desc_zh": "Makes your AI agent think like"
   },
   {
     "name": "guizang-ppt-skill",
     "full_name": "op7418/guizang-ppt-skill",
     "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
     "url": "https://github.com/op7418/guizang-ppt-skill",
-    "stars": 21833,
+    "stars": 21912,
     "language": "HTML",
     "topics": [
       "ai-agent",
@@ -46,16 +46,16 @@
     ],
     "created_at": "2026-04-23T13:23:07Z",
     "category_hint": "AI Tools",
-    "category": "AI Tools",
-    "desc_en": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image",
-    "desc_zh": "AI-agent Skill for generating "
+    "category": "Design & Creative",
+    "desc_en": "AI-powered skill for creating polished HTML slide decks",
+    "desc_zh": "人工智能制作精美PPT"
   },
   {
     "name": "MiMo-Code",
     "full_name": "XiaomiMiMo/MiMo-Code",
     "description": "MiMo Code: Where Models and Agents Co-Evolve",
     "url": "https://github.com/XiaomiMiMo/MiMo-Code",
-    "stars": 12232,
+    "stars": 12261,
     "language": "TypeScript",
     "topics": [
       "ai",
@@ -67,15 +67,15 @@
     "created_at": "2026-06-10T11:52:41Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "A codebase where models and agents in Mimora (Mimo) evolve together for advanced AI applications.",
-    "desc_zh": "合动模型与代理于Mimo中"
+    "desc_en": "MiMo Code: Where Models and Agents Co-Evolve",
+    "desc_zh": "MiMo Code: Where Models and Ag"
   },
   {
     "name": "loop-engineering",
     "full_name": "cobusgreyling/loop-engineering",
     "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
     "url": "https://github.com/cobusgreyling/loop-engineering",
-    "stars": 8666,
+    "stars": 8840,
     "language": "JavaScript",
     "topics": [
       "agentic-ai",
@@ -99,15 +99,15 @@
     "created_at": "2026-06-09T06:28:20Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "A JavaScript tool for orchestrating AI coding agents and analyzing code loops.",
-    "desc_zh": "利用AI编码器进行代码循环分析"
+    "desc_en": "Collection of AI coding agents and tools for automating development processes.",
+    "desc_zh": "用以自动化开发的人工智能编程工具"
   },
   {
     "name": "html-anything",
     "full_name": "nexu-io/html-anything",
     "description": "✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck · poster · XHS / tweet · prototype · data report · Hyperframes) 🛡️ Sandboxed preview · 📤 1-click to WeChat / X / Zhihu / HTML / PNG 🔑 Zero API key — Claude Code / Cursor / Codex / Gemini / Copilot / OpenCode / Qwen / Aider.",
     "url": "https://github.com/nexu-io/html-anything",
-    "stars": 7856,
+    "stars": 7871,
     "language": "HTML",
     "topics": [
       "agent-skills",
@@ -134,24 +134,32 @@
     "created_at": "2026-05-11T09:40:38Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfac",
-    "desc_zh": "✨ The agentic HTML editor — yo"
+    "desc_en": "Local AI-powered HTML editor streamlines web design workflow.",
+    "desc_zh": "本地AI辅助HTML编辑器，提升网页设计效率"
   },
   {
     "name": "graphify",
     "full_name": "Graphify-Labs/graphify",
-    "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+    "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "url": "https://github.com/Graphify-Labs/graphify",
-    "stars": 91638,
+    "stars": 92369,
     "language": "Python",
     "topics": [
+      "ai-agents",
       "antigravity",
+      "ast",
       "claude-code",
+      "code-analysis",
+      "code-search",
       "codex",
+      "cursor",
+      "developer-tools",
       "gemini",
       "graphrag",
       "knowledge-graph",
       "leiden",
+      "llm",
+      "mcp",
       "openclaw",
       "rag",
       "skills",
@@ -159,16 +167,16 @@
     ],
     "created_at": "2026-04-03T15:49:07Z",
     "category_hint": "Dev Tools",
-    "category": "AI Tools",
-    "desc_en": "An AI tool that transforms various code and data into a queryable knowledge graph.",
-    "desc_zh": "一种基于 AI 的工具程序，将各种代码和数据转变为查询知识图谱."
+    "category": "Dev Tools",
+    "desc_en": "Tool that converts codebases into queryable knowledge graphs for AI agents.",
+    "desc_zh": "用于将代码库转化成可查询的知识图Database"
   },
   {
     "name": "open-design",
     "full_name": "nexu-io/open-design",
     "description": "🎨 The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / Gemini / OpenCode / Qwen & 20+ CLIs via BYOK.",
     "url": "https://github.com/nexu-io/open-design",
-    "stars": 79747,
+    "stars": 80024,
     "language": "TypeScript",
     "topics": [
       "agent-skills",
@@ -194,16 +202,16 @@
     ],
     "created_at": "2026-04-28T04:25:20Z",
     "category_hint": "Dev Tools",
-    "category": "Design & Creative",
-    "desc_en": "Open-source alternative for data-centric design, locally-run desktop app.",
-    "desc_zh": "设计工具"
+    "category": "Dev Tools",
+    "desc_en": "The open-source Claude Design alternative for AI-assisted design tasks.",
+    "desc_zh": "開源的设计助手"
   },
   {
     "name": "Understand-Anything",
     "full_name": "Egonex-AI/Understand-Anything",
     "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
     "url": "https://github.com/Egonex-AI/Understand-Anything",
-    "stars": 75199,
+    "stars": 75363,
     "language": "TypeScript",
     "topics": [
       "antigravity-skills",
@@ -227,40 +235,15 @@
     "created_at": "2026-03-15T02:30:51Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "A tool for creating interactive knowledge graphs from code.",
-    "desc_zh": "工具让你以新角度理解代码"
-  },
-  {
-    "name": "rtk",
-    "full_name": "rtk-ai/rtk",
-    "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
-    "url": "https://github.com/rtk-ai/rtk",
-    "stars": 71890,
-    "language": "Rust",
-    "topics": [
-      "agentic-coding",
-      "ai-coding",
-      "anthropic",
-      "claude-code",
-      "cli",
-      "command-line-tool",
-      "cost-reduction",
-      "developer-tools",
-      "llm",
-      "open-source",
-      "productivity",
-      "rust",
-      "token-optimization"
-    ],
-    "created_at": "2026-01-22T16:54:16Z",
-    "category_hint": "Dev Tools"
+    "desc_en": "TypeScript library for creating interactive knowledge graphs from code.",
+    "desc_zh": "构建代码知识图谱工具"
   },
   {
     "name": "career-ops",
     "full_name": "santifer/career-ops",
     "description": "Open-source AI job search: scan job portals, score listings A-F, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Gemini, Codex, OpenCode…)",
     "url": "https://github.com/santifer/career-ops",
-    "stars": 60620,
+    "stars": 60742,
     "language": "JavaScript",
     "topics": [
       "ai",
@@ -288,11 +271,40 @@
     "category_hint": "Dev Tools"
   },
   {
+    "name": "Agent-Reach",
+    "full_name": "Panniantong/Agent-Reach",
+    "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "stars": 58762,
+    "language": "Python",
+    "topics": [
+      "agent-infrastructure",
+      "ai-agent",
+      "ai-search",
+      "automation",
+      "bilibili",
+      "claude-code",
+      "cli",
+      "cursor",
+      "free-api",
+      "llm-tools",
+      "mcp",
+      "python",
+      "reddit-scraper",
+      "twitter-scraper",
+      "web-scraper",
+      "xiaohongshu",
+      "youtube-transcript"
+    ],
+    "created_at": "2026-02-24T02:10:24Z",
+    "category_hint": "Dev Tools"
+  },
+  {
     "name": "hermes-studio",
     "full_name": "EKKOLearnAI/hermes-studio",
     "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics ",
     "url": "https://github.com/EKKOLearnAI/hermes-studio",
-    "stars": 9309,
+    "stars": 9338,
     "language": "TypeScript",
     "topics": [
       "agent",
@@ -318,7 +330,7 @@
     "full_name": "kenn-io/agentsview",
     "description": "Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. ",
     "url": "https://github.com/kenn-io/agentsview",
-    "stars": 4438,
+    "stars": 4458,
     "language": "Go",
     "topics": [],
     "created_at": "2026-02-19T19:33:24Z",
@@ -329,7 +341,7 @@
     "full_name": "repowise-dev/repowise",
     "description": "Codebase intelligence for AI and humans: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.",
     "url": "https://github.com/repowise-dev/repowise",
-    "stars": 3792,
+    "stars": 3828,
     "language": "Python",
     "topics": [
       "ai",
@@ -356,7 +368,7 @@
     "full_name": "yaojingang/GEOFlow",
     "description": "Open-source GEO content engineering and multi-site distribution system with AI tasks, RAG/semantic chunking, analytics, GEOFlow Agent and WordPress target publishing.",
     "url": "https://github.com/yaojingang/GEOFlow",
-    "stars": 2972,
+    "stars": 2981,
     "language": "PHP",
     "topics": [
       "ai",
@@ -376,7 +388,7 @@
     "full_name": "Observal/Observal",
     "description": "Observal is a local registry and analytics platform for your AI components.  Setup Observal, define the scope and share your Skills, MCPs and Agents.",
     "url": "https://github.com/Observal/Observal",
-    "stars": 2195,
+    "stars": 2194,
     "language": "Python",
     "topics": [
       "agents",
@@ -406,7 +418,7 @@
     "full_name": "usestrix/strix",
     "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
     "url": "https://github.com/usestrix/strix",
-    "stars": 42673,
+    "stars": 42932,
     "language": "Python",
     "topics": [
       "agents",
@@ -438,7 +450,7 @@
     "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
     "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
-    "stars": 26095,
+    "stars": 26211,
     "language": "Python",
     "topics": [
       "ai-agents",
@@ -470,7 +482,7 @@
     "full_name": "InterceptSuite/ProxyBridge",
     "description": "Proxifier Alternative to redirect any Windows/MacOS/Linux TCP and UDP traffic to HTTP/Socks5 proxy",
     "url": "https://github.com/InterceptSuite/ProxyBridge",
-    "stars": 5479,
+    "stars": 5490,
     "language": "C",
     "topics": [
       "c",
@@ -499,7 +511,7 @@
     "full_name": "Ed1s0nZ/CyberStrikeAI",
     "description": "The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.",
     "url": "https://github.com/Ed1s0nZ/CyberStrikeAI",
-    "stars": 5206,
+    "stars": 5217,
     "language": "Go",
     "topics": [
       "ai",
@@ -520,7 +532,7 @@
     "full_name": "CarterPerez-dev/Cybersecurity-Projects",
     "description": "Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Gamified Cybersecurity learning 👇",
     "url": "https://github.com/CarterPerez-dev/Cybersecurity-Projects",
-    "stars": 4153,
+    "stars": 4226,
     "language": "Go",
     "topics": [
       "ai",
@@ -552,7 +564,7 @@
     "full_name": "VoltAgent/awesome-design-md",
     "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
     "url": "https://github.com/VoltAgent/awesome-design-md",
-    "stars": 103174,
+    "stars": 103392,
     "language": "",
     "topics": [
       "awesome-list",
@@ -574,7 +586,7 @@
     "full_name": "google-labs-code/design.md",
     "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
     "url": "https://github.com/google-labs-code/design.md",
-    "stars": 26102,
+    "stars": 26154,
     "language": "TypeScript",
     "topics": [],
     "created_at": "2026-04-10T17:54:59Z",
@@ -585,7 +597,7 @@
     "full_name": "fallow-rs/fallow",
     "description": "Codebase intelligence for TypeScript and JavaScript. Free static analysis of code and styles: unused code, duplication, circular deps, complexity hotspots, architecture boundaries, design-system drift. Optional paid runtime layer (Fallow Runtime): hot-path review and cold-path deletion evidence from real production traffic.",
     "url": "https://github.com/fallow-rs/fallow",
-    "stars": 4138,
+    "stars": 4141,
     "language": "Rust",
     "topics": [
       "cli",
@@ -615,7 +627,7 @@
     "full_name": "VoltAgent/awesome-claude-design",
     "description": "Awesome Claude Design: 68 ready-to-use design system inspirations in DESIGN.md format. Drop one in, scaffold a full UI in one shot.",
     "url": "https://github.com/VoltAgent/awesome-claude-design",
-    "stars": 3161,
+    "stars": 3170,
     "language": "",
     "topics": [
       "claude-code",
@@ -632,7 +644,7 @@
     "full_name": "SnailSploit/Claude-Red",
     "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
     "url": "https://github.com/SnailSploit/Claude-Red",
-    "stars": 2717,
+    "stars": 2735,
     "language": "Python",
     "topics": [
       "claude-ai",
@@ -666,7 +678,7 @@
     "full_name": "ZhangJinHaHaHa/AgentLens",
     "description": "Agentlens is a trusted agent trading platform.  Here, you can quickly find the Agent that meets your needs, and you can also publish your own Agent to turn it into your digital asset.  We encourage everyone to transform their areas of expertise into Agents and turn them into digital assets, allowing others to see your unique strengths.",
     "url": "https://github.com/ZhangJinHaHaHa/AgentLens",
-    "stars": 1043,
+    "stars": 1042,
     "language": "TypeScript",
     "topics": [
       "agentic-ai",
@@ -698,7 +710,7 @@
     "full_name": "lawmaster10/howcryptoworksbook",
     "description": "A free, open-source book that explains how crypto actually works. 15 chapters covering Bitcoin, Ethereum, Solana, DeFi, MEV, market structure, custody, stablecoins, governance, quantum resistance, and prediction markets.",
     "url": "https://github.com/lawmaster10/howcryptoworksbook",
-    "stars": 852,
+    "stars": 854,
     "language": "",
     "topics": [
       "bitcoin",
@@ -729,7 +741,7 @@
     "full_name": "swapperfinance/swapper-toolkit",
     "description": "DeFi toolkit for AI agents and coding assistants — deposit funds, execute trades, and manage crypto wallets. Works with Claude Code, Cursor,   Windsurf, OpenClaw, CrewAI, AutoGPT, and other AI agent frameworks.",
     "url": "https://github.com/swapperfinance/swapper-toolkit",
-    "stars": 828,
+    "stars": 830,
     "language": "",
     "topics": [
       "ai-agent",
@@ -761,7 +773,7 @@
     "full_name": "usehelix/helix",
     "description": "Self-healing infrastructure for AI agent payments. 90.3% auto-recovery.",
     "url": "https://github.com/usehelix/helix",
-    "stars": 822,
+    "stars": 821,
     "language": "TypeScript",
     "topics": [
       "agent",
@@ -785,6 +797,31 @@
     ],
     "created_at": "2026-03-20T01:01:23Z",
     "category_hint": "Web3 / Blockchain"
+  },
+  {
+    "name": "rtk",
+    "full_name": "rtk-ai/rtk",
+    "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+    "url": "https://github.com/rtk-ai/rtk",
+    "stars": 71890,
+    "language": "Rust",
+    "topics": [
+      "agentic-coding",
+      "ai-coding",
+      "anthropic",
+      "claude-code",
+      "cli",
+      "command-line-tool",
+      "cost-reduction",
+      "developer-tools",
+      "llm",
+      "open-source",
+      "productivity",
+      "rust",
+      "token-optimization"
+    ],
+    "created_at": "2026-01-22T16:54:16Z",
+    "category_hint": "Dev Tools"
   },
   {
     "name": "DeepSeek-Reasonix",
@@ -1014,27 +1051,6 @@
     "category": "Dev Tools",
     "desc_en": "Bộ công cụ tạo AI Skill từ ý tưởng — Dành cho Antigravity, Claude Code, Cursor, Windsurf. Đánh giá 1",
     "desc_zh": "Bộ công cụ tạo AI Skill từ ý t"
-  },
-  {
-    "name": "garden-skills",
-    "full_name": "ConardLi/garden-skills",
-    "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
-    "url": "https://github.com/ConardLi/garden-skills",
-    "stars": 8215,
-    "language": "CSS",
-    "topics": [
-      "agent",
-      "claude",
-      "gpt-image-2",
-      "rag",
-      "skills",
-      "web-design"
-    ],
-    "created_at": "2026-04-21T11:56:17Z",
-    "category_hint": "AI Tools",
-    "category": "AI Tools",
-    "desc_en": "Open-source project showcasing ConardLi's skills, including web design and AI image generation.",
-    "desc_zh": "人工智能技能集"
   },
   {
     "name": "CLI-Anything",
