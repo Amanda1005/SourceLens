@@ -4,7 +4,7 @@
     "full_name": "hypit-ai/hypit",
     "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
     "url": "https://github.com/hypit-ai/hypit",
-    "stars": 20615,
+    "stars": 20833,
     "language": "TypeScript",
     "topics": [
       "agentic-ai",
@@ -35,30 +35,11 @@
     "desc_zh": "Clone any viral video with AI "
   },
   {
-    "name": "qm",
-    "full_name": "yc-software/qm",
-    "description": "Multiplayer agent harness for work.",
-    "url": "https://github.com/yc-software/qm",
-    "stars": 15373,
-    "language": "TypeScript",
-    "topics": [
-      "ai",
-      "assistant",
-      "harness",
-      "qm"
-    ],
-    "created_at": "2026-07-29T20:03:08Z",
-    "category_hint": "AI Tools",
-    "category": "AI Tools",
-    "desc_en": "Multiplayer agent harness for work.",
-    "desc_zh": "Multiplayer agent harness for "
-  },
-  {
     "name": "moli",
     "full_name": "lexmount/moli",
     "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
     "url": "https://github.com/lexmount/moli",
-    "stars": 14975,
+    "stars": 15709,
     "language": "Rust",
     "topics": [
       "ai-agents",
@@ -79,15 +60,34 @@
     "created_at": "2026-08-10T13:20:30Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "Moli: A lightweight, fast headless browser for AI agents, built in Rust.",
-    "desc_zh": "アルゴリズム用端末"
+    "desc_en": "Moli is a headless browser for AI agents, offering high compatibility and fast performance in Rust.",
+    "desc_zh": " 澳洲AI助手工具"
+  },
+  {
+    "name": "qm",
+    "full_name": "yc-software/qm",
+    "description": "Multiplayer agent harness for work.",
+    "url": "https://github.com/yc-software/qm",
+    "stars": 15380,
+    "language": "TypeScript",
+    "topics": [
+      "ai",
+      "assistant",
+      "harness",
+      "qm"
+    ],
+    "created_at": "2026-07-29T20:03:08Z",
+    "category_hint": "AI Tools",
+    "category": "AI Tools",
+    "desc_en": "Multiplayer agent harness for work.",
+    "desc_zh": "Multiplayer agent harness for "
   },
   {
     "name": "crm",
     "full_name": "trycompai/crm",
     "description": "Comp AI CRM is an open source, CRM designed for AI agents. Agentic-first CRM.",
     "url": "https://github.com/trycompai/crm",
-    "stars": 11189,
+    "stars": 11214,
     "language": "TypeScript",
     "topics": [],
     "created_at": "2026-07-31T21:38:51Z",
@@ -101,7 +101,7 @@
     "full_name": "genspark-ai/genoffice",
     "description": "Free, open-source AI Office suite: Docs, Sheets, Slides, PDF, Markdown and HTML editors with a built-in AI agent, plus a `genoffice` CLI and agent skill so Claude Code, Codex and Cursor can create and edit real .docx/.xlsx/.pptx files locally. Bring your own key. macOS, Windows & Linux.",
     "url": "https://github.com/genspark-ai/genoffice",
-    "stars": 9137,
+    "stars": 9228,
     "language": "TypeScript",
     "topics": [
       "ai",
@@ -136,7 +136,7 @@
     "full_name": "nexu-io/open-design",
     "description": "🎨 Best DeepSeek Harness Design Plugin. The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / DeepSeek Harness / OpenCode & 20+ CLIs via BYOK.",
     "url": "https://github.com/nexu-io/open-design",
-    "stars": 100248,
+    "stars": 100429,
     "language": "TypeScript",
     "topics": [
       "agent-skills",
@@ -163,50 +163,15 @@
     "created_at": "2026-04-28T04:25:20Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "AI-based tool for enhancing design processes, with local desktop application capability.",
-    "desc_zh": "云端设计助手"
-  },
-  {
-    "name": "rea",
-    "full_name": "morluto/rea",
-    "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-    "url": "https://github.com/morluto/rea",
-    "stars": 50518,
-    "language": "TypeScript",
-    "topics": [
-      "agent-skills",
-      "ai-agents",
-      "binary-analysis",
-      "claude-code",
-      "cli",
-      "codex",
-      "cordis",
-      "ctf",
-      "decompiler",
-      "developer-tools",
-      "disassembler",
-      "dsh",
-      "dsh-plugin",
-      "ghidra",
-      "hopper",
-      "llm",
-      "mcp",
-      "model-context-protocol",
-      "reverse-engineering",
-      "static-analysis"
-    ],
-    "created_at": "2026-04-14T00:51:32Z",
-    "category_hint": "Dev Tools",
-    "category": "Dev Tools",
-    "desc_en": "Reverse engineer anything from app behavior to native binaries using agents.",
-    "desc_zh": "逆向工程任何东西, 从应用行为到原生二进制"
+    "desc_en": "TypeScript desktop app for design prototyping with DeepSeek.",
+    "desc_zh": "開發用具型式"
   },
   {
     "name": "DeepSeek-Reasonix",
     "full_name": "esengine/DeepSeek-Reasonix",
     "description": "A reliable coding agent for complex software engineering tasks.",
     "url": "https://github.com/esengine/DeepSeek-Reasonix",
-    "stars": 35749,
+    "stars": 35760,
     "language": "Go",
     "topics": [
       "agent",
@@ -231,15 +196,15 @@
     "created_at": "2026-04-21T08:27:02Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "A reliable coding agent for complex software engineering tasks.",
-    "desc_zh": "A reliable coding agent for co"
+    "desc_en": "A Go agent named DeepSeek-Reasonix for solving complex software engineering tasks.",
+    "desc_zh": "深Seek-AI 助理工具"
   },
   {
     "name": "dbx",
     "full_name": "t8y2/dbx",
     "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
     "url": "https://github.com/t8y2/dbx",
-    "stars": 25426,
+    "stars": 25662,
     "language": "Rust",
     "topics": [
       "ai",
@@ -264,15 +229,15 @@
     "created_at": "2026-04-29T03:00:36Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQ",
-    "desc_zh": "25 MB lightweight cross-platfo"
+    "desc_en": "Rust-based lightweight cross-platform database client supporting multiple databases.",
+    "desc_zh": "多行数据库客户端"
   },
   {
     "name": "iFixAi",
     "full_name": "ifixai-ai/iFixAi",
     "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
     "url": "https://github.com/ifixai-ai/iFixAi",
-    "stars": 23069,
+    "stars": 23552,
     "language": "Python",
     "topics": [
       "agent-evaluation",
@@ -303,11 +268,46 @@
     "desc_zh": "Independent Auditing of AI Age"
   },
   {
+    "name": "opencodex",
+    "full_name": "lidge-jun/opencodex",
+    "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
+    "url": "https://github.com/lidge-jun/opencodex",
+    "stars": 17236,
+    "language": "TypeScript",
+    "topics": [
+      "ai-gateway",
+      "ai-tools",
+      "anthropic",
+      "chatgpt",
+      "claude",
+      "claude-code",
+      "codex",
+      "codex-cli",
+      "deepseek",
+      "developer-tools",
+      "gemini",
+      "grok",
+      "kiro",
+      "llm",
+      "llm-proxy",
+      "ollama",
+      "openai",
+      "openrouter",
+      "proxy",
+      "typescript"
+    ],
+    "created_at": "2026-06-18T23:03:18Z",
+    "category_hint": "Dev Tools",
+    "category": "Dev Tools",
+    "desc_en": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSee",
+    "desc_zh": "Universal provider proxy for O"
+  },
+  {
     "name": "RemoveMacAI",
     "full_name": "omlahore/RemoveMacAI",
     "description": "Debloat macOS: turn off Apple Intelligence, analytics, ads and pop-ups. A native app and CLI, and every change can be undone.",
     "url": "https://github.com/omlahore/RemoveMacAI",
-    "stars": 3952,
+    "stars": 4112,
     "language": "Swift",
     "topics": [
       "apple-intelligence",
@@ -321,9 +321,9 @@
     ],
     "created_at": "2026-09-29T11:02:39Z",
     "category_hint": "Data & Analytics",
-    "category": "Data & Analytics",
-    "desc_en": "Debloat macOS: turn off Apple Intelligence, analytics, ads and pop-ups. A native app and CLI, and ev",
-    "desc_zh": "Debloat macOS: turn off Apple "
+    "category": "Dev Tools",
+    "desc_en": "A utility to disable macOS features and reverse changes if needed.",
+    "desc_zh": "消除Apple歌曲功能"
   },
   {
     "name": "talivia",
@@ -348,14 +348,17 @@
       "web-analytics"
     ],
     "created_at": "2026-07-29T07:56:49Z",
-    "category_hint": "Data & Analytics"
+    "category_hint": "Data & Analytics",
+    "category": "Data & Analytics",
+    "desc_en": "Open-source, self-hosted revenue-first analytics for founders: web analytics, Session Replay, revenu",
+    "desc_zh": "Open-source, self-hosted reven"
   },
   {
     "name": "ktx",
     "full_name": "Kaelio/ktx",
     "description": "ktx is an executable context layer for data and analytics agents 🐙 Allow Claude Code, Codex, or other AI agents to query analytical databases accurately and with full context of your company",
     "url": "https://github.com/Kaelio/ktx",
-    "stars": 1615,
+    "stars": 1616,
     "language": "TypeScript",
     "topics": [
       "agent",
@@ -380,7 +383,10 @@
       "skills"
     ],
     "created_at": "2026-05-10T19:42:32Z",
-    "category_hint": "Data & Analytics"
+    "category_hint": "Data & Analytics",
+    "category": "Data & Analytics",
+    "desc_en": "ktx enables sophisticated data querying for analytical databases via AI.",
+    "desc_zh": " العديد的分析查询功能"
   },
   {
     "name": "cosmo-edge",
@@ -407,7 +413,10 @@
       "vlm"
     ],
     "created_at": "2026-06-09T03:54:53Z",
-    "category_hint": "Data & Analytics"
+    "category_hint": "Data & Analytics",
+    "category": "AI Tools",
+    "desc_en": "C++ engine for real-time video analytics and edge AI across various platforms.",
+    "desc_zh": "人工智能边缘计算"
   },
   {
     "name": "high-stakes-analytics-decision-lab",
@@ -427,14 +436,17 @@
       "risk-analysis"
     ],
     "created_at": "2026-07-29T03:06:23Z",
-    "category_hint": "Data & Analytics"
+    "category_hint": "Data & Analytics",
+    "category": "Data & Analytics",
+    "desc_en": "A platform-neutral analytical Skill that profiles messy data, selects case-adaptive methods, and pro",
+    "desc_zh": "A platform-neutral analytical "
   },
   {
     "name": "Anthropic-Cybersecurity-Skills",
     "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
     "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
-    "stars": 34099,
+    "stars": 34189,
     "language": "Python",
     "topics": [
       "ai-agents",
@@ -466,7 +478,7 @@
     "full_name": "openai/codex-security",
     "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
     "url": "https://github.com/openai/codex-security",
-    "stars": 11050,
+    "stars": 11056,
     "language": "TypeScript",
     "topics": [
       "ai-security",
@@ -493,7 +505,7 @@
     "full_name": "CarterPerez-dev/Cybersecurity-Projects",
     "description": "Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Gamified Cybersecurity learning 👇",
     "url": "https://github.com/CarterPerez-dev/Cybersecurity-Projects",
-    "stars": 8102,
+    "stars": 8132,
     "language": "Go",
     "topics": [
       "ai",
@@ -525,7 +537,7 @@
     "full_name": "AIPentest/CyberStrikeAI",
     "description": "The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.",
     "url": "https://github.com/AIPentest/CyberStrikeAI",
-    "stars": 7350,
+    "stars": 7541,
     "language": "Go",
     "topics": [
       "ai",
@@ -546,7 +558,7 @@
     "full_name": "InterceptSuite/ProxyBridge",
     "description": "Proxifier Alternative to redirect any Windows/MacOS/Linux TCP and UDP traffic to HTTP/Socks5 proxy",
     "url": "https://github.com/InterceptSuite/ProxyBridge",
-    "stars": 6661,
+    "stars": 6678,
     "language": "C",
     "topics": [
       "c",
@@ -575,7 +587,7 @@
     "full_name": "cobusgreyling/loop-engineering",
     "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
     "url": "https://github.com/cobusgreyling/loop-engineering",
-    "stars": 11447,
+    "stars": 11482,
     "language": "TypeScript",
     "topics": [
       "agentic-ai",
@@ -604,7 +616,7 @@
     "full_name": "Manavarya09/design-extract",
     "description": "Extract any website's complete design system with one command. DTCG tokens, semantic+primitive+composite, MCP server for Claude Code/Cursor/Windsurf, multi-platform emitters (iOS SwiftUI, Android Compose, Flutter, WordPress), Tailwind v4, Figma variables, shadcn/ui, CSS health audit, WCAG remediation, Chrome extension. MIT, Playwright, Node 20+.",
     "url": "https://github.com/Manavarya09/design-extract",
-    "stars": 4198,
+    "stars": 4206,
     "language": "HTML",
     "topics": [
       "accessibility",
@@ -636,7 +648,7 @@
     "full_name": "VoltAgent/awesome-claude-design",
     "description": "Awesome Claude Design: 68 ready-to-use design system inspirations in DESIGN.md format. Drop one in, scaffold a full UI in one shot.",
     "url": "https://github.com/VoltAgent/awesome-claude-design",
-    "stars": 4023,
+    "stars": 4031,
     "language": "",
     "topics": [
       "claude-code",
@@ -653,7 +665,7 @@
     "full_name": "Krishnagangwal/CS-Fundamentals",
     "description": "Curated CS fundamentals for placement prep: DSA,Computer Networks, DBMS & SQL, OOPs, Operating Systems, System Design & Software Engineering",
     "url": "https://github.com/Krishnagangwal/CS-Fundamentals",
-    "stars": 3254,
+    "stars": 3260,
     "language": "",
     "topics": [],
     "created_at": "2026-06-28T07:08:15Z",
@@ -664,7 +676,7 @@
     "full_name": "shadcn-ui/lint",
     "description": "An agent-first linter for Tailwind design systems. Write design system rules that agents can verify.",
     "url": "https://github.com/shadcn-ui/lint",
-    "stars": 3147,
+    "stars": 3161,
     "language": "TypeScript",
     "topics": [
       "agents",
@@ -821,41 +833,6 @@
     ],
     "created_at": "2026-03-23T10:53:26Z",
     "category_hint": "Web3 / Blockchain"
-  },
-  {
-    "name": "opencodex",
-    "full_name": "lidge-jun/opencodex",
-    "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
-    "url": "https://github.com/lidge-jun/opencodex",
-    "stars": 17083,
-    "language": "TypeScript",
-    "topics": [
-      "ai-gateway",
-      "ai-tools",
-      "anthropic",
-      "chatgpt",
-      "claude",
-      "claude-code",
-      "codex",
-      "codex-cli",
-      "deepseek",
-      "developer-tools",
-      "gemini",
-      "grok",
-      "kiro",
-      "llm",
-      "llm-proxy",
-      "ollama",
-      "openai",
-      "openrouter",
-      "proxy",
-      "typescript"
-    ],
-    "created_at": "2026-06-18T23:03:18Z",
-    "category_hint": "Dev Tools",
-    "category": "Dev Tools",
-    "desc_en": "OpenAI Codex API proxy for various language models.",
-    "desc_zh": "多语言LLM API 加密虎"
   },
   {
     "name": "openwiki",
@@ -1163,29 +1140,6 @@
     "category": "Dev Tools",
     "desc_en": "ManyChat alternative with automation and analytics, self-host required.",
     "desc_zh": "多边聊替代品无自托键"
-  },
-  {
-    "name": "GEOFlow",
-    "full_name": "yaojingang/GEOFlow",
-    "description": "Open-source GEO content engineering and multi-site distribution system with AI tasks, RAG/semantic chunking, analytics, GEOFlow Agent and WordPress target publishing.",
-    "url": "https://github.com/yaojingang/GEOFlow",
-    "stars": 3312,
-    "language": "PHP",
-    "topics": [
-      "ai",
-      "cms",
-      "content-automation",
-      "geo",
-      "openai-compatible",
-      "php",
-      "postgresql",
-      "seo"
-    ],
-    "created_at": "2026-04-13T11:42:03Z",
-    "category_hint": "Data & Analytics",
-    "category": "Data & Analytics",
-    "desc_en": "GEOFlow is an open-source GEospatial Content Engineering system with RAG, semantic chunking, and analytics.",
-    "desc_zh": "多维警报技术可用于地理数据分析"
   },
   {
     "name": "sphere",
