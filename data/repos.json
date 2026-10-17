@@ -4,7 +4,7 @@
     "full_name": "hypit-ai/hypit",
     "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
     "url": "https://github.com/hypit-ai/hypit",
-    "stars": 22564,
+    "stars": 22864,
     "language": "TypeScript",
     "topics": [
       "agentic-ai",
@@ -39,7 +39,7 @@
     "full_name": "lexmount/moli",
     "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
     "url": "https://github.com/lexmount/moli",
-    "stars": 18700,
+    "stars": 19024,
     "language": "Rust",
     "topics": [
       "ai-agents",
@@ -60,15 +60,15 @@
     "created_at": "2026-08-10T13:20:30Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "Moli is a lightweight, fast, AI-powered headless browser built in Rust.",
-    "desc_zh": "米莉·智能浏览器"
+    "desc_en": "Moli is a high-performance headless browser for AI agents written in Rust.",
+    "desc_zh": "AI 效能浏览器"
   },
   {
     "name": "qm",
     "full_name": "yc-software/qm",
     "description": "Multiplayer agent harness for work.",
     "url": "https://github.com/yc-software/qm",
-    "stars": 15423,
+    "stars": 15434,
     "language": "TypeScript",
     "topics": [
       "ai",
@@ -79,29 +79,29 @@
     "created_at": "2026-07-29T20:03:08Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "TypeScript agent harness for multi-agent collaboration in work environments.",
-    "desc_zh": "多盞能效隊伍整合"
+    "desc_en": "Multiplayer agent harness for work.",
+    "desc_zh": "Multiplayer agent harness for "
   },
   {
     "name": "crm",
     "full_name": "trycompai/crm",
     "description": "Comp AI CRM is an open source, CRM designed for AI agents. Agentic-first CRM.",
     "url": "https://github.com/trycompai/crm",
-    "stars": 11336,
+    "stars": 11359,
     "language": "TypeScript",
     "topics": [],
     "created_at": "2026-07-31T21:38:51Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "Comp AI CRM is an open source, CRM designed for AI agents. Agentic-first CRM.",
-    "desc_zh": "Comp AI CRM is an open source,"
+    "desc_en": "Comp AI CRM, an AI-driven customer relationship management tool.",
+    "desc_zh": "AI 由一台机器操控的客户关系管理系统"
   },
   {
     "name": "genoffice",
     "full_name": "genspark-ai/genoffice",
     "description": "Free, open-source AI Office suite: Docs, Sheets, Slides, PDF, Markdown and HTML editors with a built-in AI agent, plus a `genoffice` CLI and agent skill so Claude Code, Codex and Cursor can create and edit real .docx/.xlsx/.pptx files locally. Bring your own key. macOS, Windows & Linux.",
     "url": "https://github.com/genspark-ai/genoffice",
-    "stars": 9777,
+    "stars": 9855,
     "language": "TypeScript",
     "topics": [
       "ai",
@@ -128,15 +128,15 @@
     "created_at": "2026-07-31T09:40:58Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "An open-source AI Office suite with a free CLI and AI editor.",
-    "desc_zh": "免费 AI 办公套装"
+    "desc_en": "A free AI-powered office suite for Docs, Sheets, Slides, PDF, Markdown and HTML editing.",
+    "desc_zh": "AI 办公套件"
   },
   {
     "name": "DeepSeek-Reasonix",
     "full_name": "esengine/DeepSeek-Reasonix",
     "description": "A reliable coding agent for complex software engineering tasks.",
     "url": "https://github.com/esengine/DeepSeek-Reasonix",
-    "stars": 35814,
+    "stars": 35820,
     "language": "Go",
     "topics": [
       "agent",
@@ -161,15 +161,15 @@
     "created_at": "2026-04-21T08:27:02Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "A coding agent in Go for software engineering tasks.",
-    "desc_zh": "深度-Seeker编程工具"
+    "desc_en": "A reliable coding agent for complex software engineering tasks.",
+    "desc_zh": "A reliable coding agent for co"
   },
   {
     "name": "iFixAi",
     "full_name": "ifixai-ai/iFixAi",
     "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
     "url": "https://github.com/ifixai-ai/iFixAi",
-    "stars": 28375,
+    "stars": 28774,
     "language": "Python",
     "topics": [
       "agent-evaluation",
@@ -196,15 +196,15 @@
     "created_at": "2026-04-27T13:02:34Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial ques",
-    "desc_zh": "Independent Auditing of AI Age"
+    "desc_en": "iFixAi provides independent auditing to evaluate the performance and alignment of AI agents.",
+    "desc_zh": "ИИ评估工具"
   },
   {
     "name": "dbx",
     "full_name": "t8y2/dbx",
     "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
     "url": "https://github.com/t8y2/dbx",
-    "stars": 26868,
+    "stars": 27003,
     "language": "Rust",
     "topics": [
       "ai",
@@ -229,15 +229,15 @@
     "created_at": "2026-04-29T03:00:36Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "A lightweight Rust library serving as a database client for 100+ databases.",
-    "desc_zh": "轻量级数据库库"
+    "desc_en": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQ",
+    "desc_zh": "25 MB lightweight cross-platfo"
   },
   {
     "name": "opencodex",
     "full_name": "lidge-jun/opencodex",
     "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
     "url": "https://github.com/lidge-jun/opencodex",
-    "stars": 17454,
+    "stars": 17497,
     "language": "TypeScript",
     "topics": [
       "ai-gateway",
@@ -264,29 +264,29 @@
     "created_at": "2026-06-18T23:03:18Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSee",
-    "desc_zh": "Universal provider proxy for O"
+    "desc_en": "A universal AI proxy for various LLMs including Codex and Claude Code.",
+    "desc_zh": "通用LLM代理器"
   },
   {
     "name": "openwiki",
     "full_name": "langchain-ai/openwiki",
     "description": "OpenWiki is a CLI that writes and maintains agent documentation for your codebase.",
     "url": "https://github.com/langchain-ai/openwiki",
-    "stars": 17199,
+    "stars": 17222,
     "language": "TypeScript",
     "topics": [],
     "created_at": "2026-06-22T23:48:26Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "A CLI tool for generating documentation for your codebase.",
-    "desc_zh": "開發用的代碼表記時間儲存"
+    "desc_en": "OpenWiki is a CLI that writes and maintains agent documentation for your codebase.",
+    "desc_zh": "OpenWiki is a CLI that writes "
   },
   {
     "name": "RemoveMacAI",
     "full_name": "omlahore/RemoveMacAI",
     "description": "Debloat macOS: turn off Apple Intelligence, analytics, ads and pop-ups. A native app and CLI, and every change can be undone.",
     "url": "https://github.com/omlahore/RemoveMacAI",
-    "stars": 4786,
+    "stars": 4850,
     "language": "Swift",
     "topics": [
       "apple-intelligence",
@@ -329,15 +329,15 @@
     "created_at": "2026-07-29T07:56:49Z",
     "category_hint": "Data & Analytics",
     "category": "Data & Analytics",
-    "desc_en": "Self-hosted revenue-first web and session analytics platform alternative to Datafast.",
-    "desc_zh": "开源，追用户收入自有工具"
+    "desc_en": "Open-source, self-hosted revenue-first analytics for founders: web analytics, Session Replay, revenu",
+    "desc_zh": "Open-source, self-hosted reven"
   },
   {
     "name": "cosmo-edge",
     "full_name": "cosmo-wander-ai/cosmo-edge",
     "description": "Production-grade C++ edge AI engine for video analytics and on-device VLM across Sophon, Rockchip RKNN, and x86, with visual orchestration, real-time OSD, events, and reproducible benchmarks.",
     "url": "https://github.com/cosmo-wander-ai/cosmo-edge",
-    "stars": 1702,
+    "stars": 1746,
     "language": "C",
     "topics": [
       "bm1688",
@@ -359,15 +359,15 @@
     "created_at": "2026-06-09T03:54:53Z",
     "category_hint": "Data & Analytics",
     "category": "Data & Analytics",
-    "desc_en": "C++ edge AI engine for video analytics and on-device VLM.",
-    "desc_zh": "边缘计算 AI 驱动"
+    "desc_en": "Production-grade C++ edge AI engine for video analytics and on-device VLM across Sophon, Rockchip RK",
+    "desc_zh": "Production-grade C++ edge AI e"
   },
   {
     "name": "ktx",
     "full_name": "Kaelio/ktx",
     "description": "ktx is an executable context layer for data and analytics agents 🐙 Allow Claude Code, Codex, or other AI agents to query analytical databases accurately and with full context of your company",
     "url": "https://github.com/Kaelio/ktx",
-    "stars": 1617,
+    "stars": 1618,
     "language": "TypeScript",
     "topics": [
       "agent",
@@ -392,10 +392,7 @@
       "skills"
     ],
     "created_at": "2026-05-10T19:42:32Z",
-    "category_hint": "Data & Analytics",
-    "category": "Data & Analytics",
-    "desc_en": "A context layer for AI agents to query analytics databases accurately.",
-    "desc_zh": "数据分析解码层 🚀"
+    "category_hint": "Data & Analytics"
   },
   {
     "name": "high-stakes-analytics-decision-lab",
@@ -415,17 +412,14 @@
       "risk-analysis"
     ],
     "created_at": "2026-07-29T03:06:23Z",
-    "category_hint": "Data & Analytics",
-    "category": "Data & Analytics",
-    "desc_en": "A Python platform for dirty data analysis, case-adaptive methods, and visual reporting.",
-    "desc_zh": "数据分析平台"
+    "category_hint": "Data & Analytics"
   },
   {
     "name": "Anthropic-Cybersecurity-Skills",
     "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
     "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
-    "stars": 34516,
+    "stars": 34576,
     "language": "Python",
     "topics": [
       "ai-agents",
@@ -450,17 +444,14 @@
       "threat-intelligence"
     ],
     "created_at": "2026-02-25T09:47:50Z",
-    "category_hint": "Security",
-    "category": "Security",
-    "desc_en": "818 cybersecurity skills mapped to various frameworks for AI agents.",
-    "desc_zh": "安全技能817"
+    "category_hint": "Security"
   },
   {
     "name": "codex-security",
     "full_name": "openai/codex-security",
     "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
     "url": "https://github.com/openai/codex-security",
-    "stars": 11110,
+    "stars": 11121,
     "language": "TypeScript",
     "topics": [
       "ai-security",
@@ -480,17 +471,14 @@
       "vulnerability-scanning"
     ],
     "created_at": "2026-07-13T22:00:13Z",
-    "category_hint": "Security",
-    "category": "Security",
-    "desc_en": "OpenAI's Codex Security provides tools for identifying and repairing security flaws.",
-    "desc_zh": "安全工具"
+    "category_hint": "Security"
   },
   {
     "name": "Cybersecurity-Projects",
     "full_name": "CarterPerez-dev/Cybersecurity-Projects",
     "description": "Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Gamified Cybersecurity learning 👇",
     "url": "https://github.com/CarterPerez-dev/Cybersecurity-Projects",
-    "stars": 8261,
+    "stars": 8281,
     "language": "Go",
     "topics": [
       "ai",
@@ -515,17 +503,14 @@
       "python"
     ],
     "created_at": "2025-11-08T02:16:49Z",
-    "category_hint": "Security",
-    "category": "Security",
-    "desc_en": "Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use a",
-    "desc_zh": "Building 70 Projects ranging f"
+    "category_hint": "Security"
   },
   {
     "name": "CyberStrikeAI",
     "full_name": "AIPentest/CyberStrikeAI",
     "description": "The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.",
     "url": "https://github.com/AIPentest/CyberStrikeAI",
-    "stars": 7827,
+    "stars": 7849,
     "language": "Go",
     "topics": [
       "ai",
@@ -539,17 +524,14 @@
       "pentesting-tools"
     ],
     "created_at": "2025-11-08T10:41:23Z",
-    "category_hint": "Security",
-    "category": "Security",
-    "desc_en": "The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence b",
-    "desc_zh": "The system of action for AI-na"
+    "category_hint": "Security"
   },
   {
     "name": "user-scanner",
     "full_name": "kaifcodec/user-scanner",
     "description": "🕵️‍♂️ (2-in-1) Email & Username OSINT suite featuring native MCP support for deep data extraction just from a single Email/Username. Analyzes 2720+ actively maintained scan vectors (210+ email / 2510+ username) for security research, investigations, and digital footprinting.",
     "url": "https://github.com/kaifcodec/user-scanner",
-    "stars": 5405,
+    "stars": 5415,
     "language": "Python",
     "topics": [
       "cybersecurity",
@@ -571,17 +553,14 @@
       "threat-intelligence"
     ],
     "created_at": "2025-10-19T04:21:48Z",
-    "category_hint": "Security",
-    "category": "Security",
-    "desc_en": "A tool for security analysis from a single Email/Username.",
-    "desc_zh": "安全分析工具"
+    "category_hint": "Security"
   },
   {
     "name": "loop-engineering",
     "full_name": "cobusgreyling/loop-engineering",
     "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
     "url": "https://github.com/cobusgreyling/loop-engineering",
-    "stars": 11557,
+    "stars": 11565,
     "language": "TypeScript",
     "topics": [
       "agentic-ai",
@@ -603,31 +582,25 @@
       "prompt-engineering"
     ],
     "created_at": "2026-06-09T06:28:20Z",
-    "category_hint": "Design & Creative",
-    "category": "Design & Creative",
-    "desc_en": "A repository for loop engineering with AI coding agents, exploring system design and orchestration.",
-    "desc_zh": "迴圈工程與人工智能駕駛器"
+    "category_hint": "Design & Creative"
   },
   {
     "name": "CS-Fundamentals",
     "full_name": "Krishnagangwal/CS-Fundamentals",
     "description": "Curated CS fundamentals for placement prep: DSA,Computer Networks, DBMS & SQL, OOPs, Operating Systems, System Design & Software Engineering",
     "url": "https://github.com/Krishnagangwal/CS-Fundamentals",
-    "stars": 3300,
+    "stars": 3302,
     "language": "",
     "topics": [],
     "created_at": "2026-06-28T07:08:15Z",
-    "category_hint": "Design & Creative",
-    "category": "Design & Creative",
-    "desc_en": "A compilation of resources for computer science fundamentals and software engineering preparation.",
-    "desc_zh": "设计原理与创意编程资料"
+    "category_hint": "Design & Creative"
   },
   {
     "name": "lint",
     "full_name": "shadcn-ui/lint",
     "description": "An agent-first linter for Tailwind design systems. Write design system rules that agents can verify.",
     "url": "https://github.com/shadcn-ui/lint",
-    "stars": 3205,
+    "stars": 3207,
     "language": "TypeScript",
     "topics": [
       "agents",
@@ -640,17 +613,14 @@
       "tailwindcss"
     ],
     "created_at": "2026-09-02T11:51:38Z",
-    "category_hint": "Design & Creative",
-    "category": "Design & Creative",
-    "desc_en": "An agent-first linter for Tailwind design systems. Write design system rules that agents can verify.",
-    "desc_zh": "An agent-first linter for Tail"
+    "category_hint": "Design & Creative"
   },
   {
     "name": "awesome-architecture",
     "full_name": "study8677/awesome-architecture",
     "description": "🧭 Architecture-first system design: 26 bilingual tutorials, 25 architecture templates, and 6 end-to-end cases covering distributed systems, AI-native systems, RAG, coding Agents, and production trade-offs.",
     "url": "https://github.com/study8677/awesome-architecture",
-    "stars": 2445,
+    "stars": 2447,
     "language": "Vue",
     "topics": [
       "ai-agents",
@@ -675,17 +645,14 @@
       "system-design-interview"
     ],
     "created_at": "2026-05-23T02:44:43Z",
-    "category_hint": "Design & Creative",
-    "category": "Design & Creative",
-    "desc_en": "🧭 Architecture-first system design: 26 bilingual tutorials, 25 architecture templates, and 6 end-to-",
-    "desc_zh": "🧭 Architecture-first system de"
+    "category_hint": "Design & Creative"
   },
   {
     "name": "claude-design-system-prompt",
     "full_name": "Trystan-SA/claude-design-system-prompt",
     "description": "Reverse-engineered system prompt and skill library that turns an LLM into an opinionated, accessibility-aware, AI-slop-resistant design collaborator.",
     "url": "https://github.com/Trystan-SA/claude-design-system-prompt",
-    "stars": 1994,
+    "stars": 1997,
     "language": "",
     "topics": [],
     "created_at": "2026-04-27T14:07:38Z",
