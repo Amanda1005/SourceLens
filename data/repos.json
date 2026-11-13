@@ -4,7 +4,7 @@
     "full_name": "CopilotKit/OpenBot",
     "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
     "url": "https://github.com/CopilotKit/OpenBot",
-    "stars": 11131,
+    "stars": 11751,
     "language": "TypeScript",
     "topics": [
       "ag-ui",
@@ -18,29 +18,29 @@
     "created_at": "2026-08-17T00:44:59Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "Open-source AI agents with browser and tools for pre-planned actions.",
-    "desc_zh": "开源 AI 职员"
+    "desc_en": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with eve",
+    "desc_zh": "Open-source AI coworkers that "
   },
   {
     "name": "ZCode",
     "full_name": "zai-org/ZCode",
     "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
     "url": "https://github.com/zai-org/ZCode",
-    "stars": 8629,
+    "stars": 8647,
     "language": "TypeScript",
     "topics": [],
     "created_at": "2026-09-20T12:01:16Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "An intelligent agent for coding tasks using TypeScript.",
-    "desc_zh": "人工智能编程助手"
+    "desc_en": "ZCode, a TypeScript-based coding agent for AI applications.",
+    "desc_zh": "ZCode. ZhETO最强的编程助手。"
   },
   {
     "name": "Mika",
     "full_name": "wangzan101/Mika",
     "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
     "url": "https://github.com/wangzan101/Mika",
-    "stars": 8281,
+    "stars": 8429,
     "language": "Kotlin",
     "topics": [
       "accessibility",
@@ -55,15 +55,15 @@
     "created_at": "2026-10-29T14:34:07Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "Mika: An Android AI agent with Kotlin for automation and accessibility",
-    "desc_zh": "利用Kotlin实现androidAI自动化"
+    "desc_en": "Kotlin-based AI agent simplifies Android app and web automation.",
+    "desc_zh": "与安卓系统自动化"
   },
   {
     "name": "coucou",
     "full_name": "Louis-CFM/coucou",
     "description": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen.",
     "url": "https://github.com/Louis-CFM/coucou",
-    "stars": 7137,
+    "stars": 7155,
     "language": "Swift",
     "topics": [
       "ai-agents",
@@ -90,15 +90,15 @@
     "created_at": "2026-09-27T21:54:12Z",
     "category_hint": "AI Tools",
     "category": "AI Tools",
-    "desc_en": "A Swift app for monitoring various AI coding agents from iOS devices.",
-    "desc_zh": "人工智能助手"
+    "desc_en": "A Swift app for monitoring and approving various AI coding agents on iOS devices.",
+    "desc_zh": "小助手真实监管安卓技术"
   },
   {
     "name": "logo-design-skill",
     "full_name": "kaankiziltug/logo-design-skill",
     "description": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
     "url": "https://github.com/kaankiziltug/logo-design-skill",
-    "stars": 6661,
+    "stars": 6759,
     "language": "HTML",
     "topics": [
       "agent-skills",
@@ -113,15 +113,15 @@
     "created_at": "2026-09-26T08:23:34Z",
     "category_hint": "AI Tools",
     "category": "Design & Creative",
-    "desc_en": "A resource for logo design skills with principles, process, and references for AI agents.",
-    "desc_zh": "标志设计技能资料"
+    "desc_en": "A resource for developing logo design skills for AI-based applications.",
+    "desc_zh": "设计美学习"
   },
   {
     "name": "xerj",
     "full_name": "xerj-org/xerj",
     "description": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
     "url": "https://github.com/xerj-org/xerj",
-    "stars": 18880,
+    "stars": 18977,
     "language": "Rust",
     "topics": [
       "agent-memory",
@@ -148,15 +148,15 @@
     "created_at": "2026-06-30T04:32:45Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "AI-based search engine and server for Rust bots with various search functionalities",
-    "desc_zh": "人工智能搜索引擎、Rust机器人服务器"
+    "desc_en": "Rust AI engine for indexing and search capabilities.",
+    "desc_zh": "开发工具, 脚本引擎"
   },
   {
     "name": "opencodex",
     "full_name": "lidge-jun/opencodex",
     "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
     "url": "https://github.com/lidge-jun/opencodex",
-    "stars": 18411,
+    "stars": 18455,
     "language": "TypeScript",
     "topics": [
       "ai-gateway",
@@ -183,36 +183,36 @@
     "created_at": "2026-06-18T23:03:18Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "A universal LLM provider proxy for OpenAI Codex & Claude Code.",
-    "desc_zh": "開源 LLM 課程代理"
+    "desc_en": "Provides a universal proxy for different language models with Codex and Claude.",
+    "desc_zh": "提供多种LLM的通用代理"
   },
   {
     "name": "openwiki",
     "full_name": "langchain-ai/openwiki",
     "description": "OpenWiki is a CLI that writes and maintains agent documentation for your codebase.",
     "url": "https://github.com/langchain-ai/openwiki",
-    "stars": 17906,
+    "stars": 17922,
     "language": "TypeScript",
     "topics": [],
     "created_at": "2026-06-22T23:48:26Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "CLI for managing agent documentation in TypeScript.",
-    "desc_zh": "開源維繫程序碼清單"
+    "desc_en": "OpenWiki is a CLI tool for writing and maintaining agent documentation for codebases.",
+    "desc_zh": "开放维基 CLI, 写文档"
   },
   {
     "name": "ai-memory",
     "full_name": "akitaonrails/ai-memory",
     "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
     "url": "https://github.com/akitaonrails/ai-memory",
-    "stars": 15692,
+    "stars": 15754,
     "language": "Rust",
     "topics": [],
     "created_at": "2026-05-21T23:23:51Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agen",
-    "desc_zh": "Solution for long term memory "
+    "desc_en": "Rust-based CLI tool to manage agent memory for coding platforms.",
+    "desc_zh": "愈大手記支持"
   },
   {
     "name": "MiMo-Code",
@@ -231,15 +231,15 @@
     "created_at": "2026-06-10T11:52:41Z",
     "category_hint": "Dev Tools",
     "category": "Dev Tools",
-    "desc_en": "An platform for evolving AI models and agents using TypeScript.",
-    "desc_zh": "開發工具平台"
+    "desc_en": "A TypeScript repository facilitating the co-evolution of models and agents, or 'Mimo Code'.",
+    "desc_zh": "MiMo-Cód开发工具"
   },
   {
     "name": "RemoveMacAI",
     "full_name": "omlahore/RemoveMacAI",
     "description": "Turn off Apple Intelligence and delete its models on your Mac. Optional tweaks for analytics, ads and pop-ups. A native app and CLI, and every change can be undone.",
     "url": "https://github.com/omlahore/RemoveMacAI",
-    "stars": 6029,
+    "stars": 6046,
     "language": "Swift",
     "topics": [
       "ai-blocker",
@@ -256,16 +256,16 @@
     ],
     "created_at": "2026-09-29T11:02:39Z",
     "category_hint": "Data & Analytics",
-    "category": "Dev Tools",
-    "desc_en": "A native app and CLI to disable Apple Intelligence and remove its models on Mac.",
-    "desc_zh": "Mac移除苹果智能"
+    "category": "Data & Analytics",
+    "desc_en": "Turn off Apple Intelligence and delete its models on your Mac. Optional tweaks for analytics, ads an",
+    "desc_zh": "Turn off Apple Intelligence an"
   },
   {
     "name": "talivia",
     "full_name": "talivia-group/talivia",
     "description": "Open-source, self-hosted revenue-first analytics for founders: web analytics, Session Replay, revenue attribution, and customer revenue integrations. datafast alternative",
     "url": "https://github.com/talivia-group/talivia",
-    "stars": 2288,
+    "stars": 2289,
     "language": "TypeScript",
     "topics": [
       "analytics",
@@ -285,9 +285,8 @@
     "created_at": "2026-07-29T07:56:49Z",
     "category_hint": "Data & Analytics",
     "category": "Data & Analytics",
-    "desc_en": "An open-source, self-hosted revenue-first analytics suite for founders, with web analytics and revenue attribution.",
-    "desc_zh": "分析平台，重点是收入，总体",
-    "desc_cy": "Platformeanéo-selon-porfedo-de pandas analytics-adadarti, gwryddair-agedien honaniaid-diwided"
+    "desc_en": "An open-source, self-hosted analytics platform for founders tracking web analytics and revenue.",
+    "desc_zh": "佚名自建分析平台"
   },
   {
     "name": "cosmo-edge",
@@ -316,15 +315,15 @@
     "created_at": "2026-06-09T03:54:53Z",
     "category_hint": "Data & Analytics",
     "category": "Data & Analytics",
-    "desc_en": "C++ edge AI engine for video analytics, featuring visual orchestration and real-time OSD.",
-    "desc_zh": "视频分析精英引擎"
+    "desc_en": "C++ engine for video analytics in edge AI on various processors.",
+    "desc_zh": "边缘AI视频分析引擎"
   },
   {
     "name": "high-stakes-analytics-decision-lab",
     "full_name": "limingrui679-design/high-stakes-analytics-decision-lab",
     "description": "A platform-neutral analytical Skill that profiles messy data, selects case-adaptive methods, and produces source-backed visual reports for high-stakes decisions.",
     "url": "https://github.com/limingrui679-design/high-stakes-analytics-decision-lab",
-    "stars": 1007,
+    "stars": 1006,
     "language": "Python",
     "topics": [
       "agent-skills",
@@ -339,15 +338,15 @@
     "created_at": "2026-07-29T03:06:23Z",
     "category_hint": "Data & Analytics",
     "category": "Data & Analytics",
-    "desc_en": "Platform-neutral Skill for messy data analysis and risk-informed decision-making.",
-    "desc_zh": "深度数据分析系统"
+    "desc_en": "A platform-neutral analytical Skill that profiles messy data, selects case-adaptive methods, and pro",
+    "desc_zh": "A platform-neutral analytical "
   },
   {
     "name": "GEOInflow",
     "full_name": "yaojingang/GEOInflow",
     "description": "Self-hosted web and AI crawler analytics for Generative Engine Optimization (GEO). Track visitors, AI search referrals, crawl logs, content coverage, and conversions. Jointly published by 猎看科技 · 北京日报社智源GEO. MIT licensed.",
     "url": "https://github.com/yaojingang/GEOInflow",
-    "stars": 836,
+    "stars": 843,
     "language": "TypeScript",
     "topics": [
       "ai-analytics",
@@ -360,15 +359,15 @@
     "created_at": "2026-10-26T03:12:45Z",
     "category_hint": "Data & Analytics",
     "category": "Data & Analytics",
-    "desc_en": "Self-hosted web and AI crawler analytics for tracking various metrics.",
-    "desc_zh": "自托解析"
+    "desc_en": "Self-hosted web and AI crawler analytics for Generative Engine Optimization (GEO). Track visitors, A",
+    "desc_zh": "Self-hosted web and AI crawler"
   },
   {
     "name": "Anthropic-Cybersecurity-Skills",
     "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
     "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
-    "stars": 35943,
+    "stars": 36021,
     "language": "Python",
     "topics": [
       "ai-agents",
@@ -395,15 +394,15 @@
     "created_at": "2026-02-25T09:47:50Z",
     "category_hint": "Security",
     "category": "Security",
-    "desc_en": "707 skills mapped to frameworks for enhanced cybersecurity AI agents.",
-    "desc_zh": "セキュリティ強化のための707スキル"
+    "desc_en": "Repository focuses on AI-powered cybersecurity skills and frameworks.",
+    "desc_zh": "事先评估 襄防安全"
   },
   {
     "name": "codex-security",
     "full_name": "openai/codex-security",
     "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
     "url": "https://github.com/openai/codex-security",
-    "stars": 11888,
+    "stars": 12582,
     "language": "TypeScript",
     "topics": [
       "ai-security",
@@ -425,15 +424,15 @@
     "created_at": "2026-07-13T22:00:13Z",
     "category_hint": "Security",
     "category": "Security",
-    "desc_en": "OpenAI's Codex Security CLI and TypeScript SDK for security vulnerabilities.",
-    "desc_zh": "可用安全检测工具"
+    "desc_en": "CLI and SDK for scanning and fixing security vulnerabilities in code using OpenAI's Codex",
+    "desc_zh": "安全性漏洞扫描工具"
   },
   {
     "name": "AiSOC",
     "full_name": "beenuar/AiSOC",
     "description": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
     "url": "https://github.com/beenuar/AiSOC",
-    "stars": 7383,
+    "stars": 7586,
     "language": "Python",
     "topics": [
       "agentic-ai",
@@ -460,15 +459,15 @@
     "created_at": "2026-05-02T03:30:19Z",
     "category_hint": "Security",
     "category": "Security",
-    "desc_en": "Open-source AI-powered SOC platform for security operations.",
-    "desc_zh": "安全AI SOC 機構"
+    "desc_en": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigatio",
+    "desc_zh": "Open-source AI Security Operat"
   },
   {
     "name": "SilentSniffer",
     "full_name": "AhmadHassan-BTed/SilentSniffer",
     "description": "A professional, high-fidelity de-anonymization and vulnerability diagnostic framework. Features a zero-coupling modular architecture for browser-based intelligence gathering, hardware fingerprinting, and security research.",
     "url": "https://github.com/AhmadHassan-BTed/SilentSniffer",
-    "stars": 5878,
+    "stars": 5874,
     "language": "JavaScript",
     "topics": [
       "browser-security",
@@ -490,15 +489,15 @@
     "created_at": "2026-04-26T12:54:53Z",
     "category_hint": "Security",
     "category": "Security",
-    "desc_en": "A framework for browser-based de-anonymization and security vulnerability diagnostics.",
-    "desc_zh": "安全诊断框架"
+    "desc_en": "SilentSniffer is a de-anonymization framework for cybersecurity professionals.",
+    "desc_zh": "静默嗅探， seguridad 技师工具"
   },
   {
     "name": "VulnClaw",
     "full_name": "Netw0rkNoob/VulnClaw",
     "description": "基于 AI Agent + MCP 工具链 + 渗透 Skill 编排， 配合大语言模型， 自然语言输入 → 自动完成「信息收集 → 漏洞发现 → 漏洞利用 → 报告生成」全流程。",
     "url": "https://github.com/Netw0rkNoob/VulnClaw",
-    "stars": 3919,
+    "stars": 3920,
     "language": "Python",
     "topics": [
       "ai",
@@ -515,15 +514,15 @@
     "created_at": "2026-04-18T13:02:17Z",
     "category_hint": "Security",
     "category": "Security",
-    "desc_en": "VulnClaw automates penetration testing with AI using natural language commands.",
-    "desc_zh": "應用AI自動渗透檢測"
+    "desc_en": "Automates red team activities including information gathering and exploitation using AI agents and penetration-testing tools.",
+    "desc_zh": "AI 安 全 巡 虛 努 作"
   },
   {
     "name": "loop-engineering",
     "full_name": "cobusgreyling/loop-engineering",
     "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
     "url": "https://github.com/cobusgreyling/loop-engineering",
-    "stars": 11754,
+    "stars": 11762,
     "language": "TypeScript",
     "topics": [
       "agentic-ai",
@@ -547,29 +546,29 @@
     "created_at": "2026-06-09T06:28:20Z",
     "category_hint": "Design & Creative",
     "category": "Design & Creative",
-    "desc_en": "A TypeScript repository for AI coding agents, focusing on loop engineering and automation.",
-    "desc_zh": "人工智能编程代理。"
+    "desc_en": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems ",
+    "desc_zh": "Practical patterns, starters &"
   },
   {
     "name": "CS-Fundamentals",
     "full_name": "Krishnagangwal/CS-Fundamentals",
     "description": "Curated CS fundamentals for placement prep: DSA,Computer Networks, DBMS & SQL, OOPs, Operating Systems, System Design & Software Engineering",
     "url": "https://github.com/Krishnagangwal/CS-Fundamentals",
-    "stars": 3445,
+    "stars": 3448,
     "language": "",
     "topics": [],
     "created_at": "2026-06-28T07:08:15Z",
     "category_hint": "Design & Creative",
     "category": "Design & Creative",
-    "desc_en": "A resource for preparing for computer science placements.",
-    "desc_zh": "设计类电脑精英准备"
+    "desc_en": "A collection of curated resources for Computer Science basics and placement preparation.",
+    "desc_zh": "设计与创新"
   },
   {
     "name": "lint",
     "full_name": "shadcn-ui/lint",
     "description": "An agent-first linter for Tailwind design systems. Write design system rules that agents can verify.",
     "url": "https://github.com/shadcn-ui/lint",
-    "stars": 3351,
+    "stars": 3353,
     "language": "TypeScript",
     "topics": [
       "agents",
@@ -584,8 +583,8 @@
     "created_at": "2026-09-02T11:51:38Z",
     "category_hint": "Design & Creative",
     "category": "Design & Creative",
-    "desc_en": "A linter for TypeScript Tailwind design systems to ensure agents can verify design rules.",
-    "desc_zh": "设计系统规范lint"
+    "desc_en": "A TypeScript linter for checking Tailwind design system rules for agents.",
+    "desc_zh": "多式事規範容器"
   },
   {
     "name": "awesome-architecture",
@@ -619,15 +618,15 @@
     "created_at": "2026-05-23T02:44:43Z",
     "category_hint": "Design & Creative",
     "category": "Design & Creative",
-    "desc_en": "A collection of architecture system design tutorials and templates.",
-    "desc_zh": "设计系统架构资料集"
+    "desc_en": "A collection of architecture tutorials, patterns, and templates for system design.",
+    "desc_zh": "系统设计教程集"
   },
   {
     "name": "video-talkcraft",
     "full_name": "Vincentwei1021/video-talkcraft",
     "description": "Agent skill that turns Claude Code / Codex into a motion-design studio for voiceover-driven explainer videos — word-level voiceover sync, 109 motion recipe cards, an anti-slideshow camera system, Remotion rendering.",
     "url": "https://github.com/Vincentwei1021/video-talkcraft",
-    "stars": 2278,
+    "stars": 2295,
     "language": "HTML",
     "topics": [
       "agent-skills",
@@ -654,7 +653,7 @@
     "full_name": "unicity-sphere/sphere-sdk",
     "description": "The SDK for autonomous economic agents. Give an agent an identity, a wallet, and the ability to find, negotiate with, and settle with other agents - peer-to-peer, with perfect privacy and ultra-fast finality",
     "url": "https://github.com/unicity-sphere/sphere-sdk",
-    "stars": 5388,
+    "stars": 5389,
     "language": "TypeScript",
     "topics": [
       "ai-agents",
@@ -663,10 +662,7 @@
       "commerce"
     ],
     "created_at": "2026-01-27T12:05:07Z",
-    "category_hint": "Web3 / Blockchain",
-    "category": "Web3 / Blockchain",
-    "desc_en": "The SDK for autonomous economic agents. Give an agent an identity, a wallet, and the ability to find",
-    "desc_zh": "The SDK for autonomous economi"
+    "category_hint": "Web3 / Blockchain"
   },
   {
     "name": "crypto-bar-mac",
@@ -698,10 +694,7 @@
       "menu-bar"
     ],
     "created_at": "2026-06-22T20:30:03Z",
-    "category_hint": "Web3 / Blockchain",
-    "category": "Web3 / Blockchain",
-    "desc_en": "macOS crypto menu bar app that bring real time cryptocurrency prices using the CoinGecko API. Suppor",
-    "desc_zh": "macOS crypto menu bar app that"
+    "category_hint": "Web3 / Blockchain"
   },
   {
     "name": "AgentLens",
@@ -733,17 +726,14 @@
       "zero-knowledge-proofs"
     ],
     "created_at": "2026-04-15T16:21:03Z",
-    "category_hint": "Web3 / Blockchain",
-    "category": "Web3 / Blockchain",
-    "desc_en": "A platform for trading and publishing Agent assets with blockchain features.",
-    "desc_zh": "基建薄層"
+    "category_hint": "Web3 / Blockchain"
   },
   {
     "name": "Exodus-Fake-Balance",
     "full_name": "Danuse84/Exodus-Fake-Balance",
     "description": "Wallet UI simulation tool for BTC, ETH, SOL, XRP, and 200+ assets. Customize displayed balances in a controlled demo environment with persistent visual settings and screenshot-ready previews. Designed for testing, demonstrations, and UI prototyping without altering actual blockchain balances or transactions.",
     "url": "https://github.com/Danuse84/Exodus-Fake-Balance",
-    "stars": 933,
+    "stars": 934,
     "language": "Python",
     "topics": [
       "bitcoin-transaction-tool",
@@ -768,10 +758,7 @@
       "trx-flash"
     ],
     "created_at": "2026-11-05T04:48:43Z",
-    "category_hint": "Web3 / Blockchain",
-    "category": "Web3 / Blockchain",
-    "desc_en": "Python-based UI simulation tool for cryptocurrency wallets, supporting multiple assets.",
-    "desc_zh": "加密货币 UI 模拟工具"
+    "category_hint": "Web3 / Blockchain"
   },
   {
     "name": "swapper-toolkit",
@@ -803,10 +790,7 @@
       "windsurf"
     ],
     "created_at": "2026-03-23T10:53:26Z",
-    "category_hint": "Web3 / Blockchain",
-    "category": "Web3 / Blockchain",
-    "desc_en": "A DeFi toolkit for AI agents and coding assistants to manage crypto wallets and execute trades.",
-    "desc_zh": "区块链工具箱"
+    "category_hint": "Web3 / Blockchain"
   },
   {
     "name": "helix",
